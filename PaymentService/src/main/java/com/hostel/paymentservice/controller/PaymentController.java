@@ -18,36 +18,43 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/addPayment")
-    public Payment addPayment(@RequestBody Payment payment){
+    public Payment addPayment(@RequestBody Payment payment) {
         payment.setPayStatus(false);
         return paymentService.addPayment(payment);
     }
 
+    @GetMapping("/get/{payId}")
+    public Payment getPayment(@PathVariable int payId){
+        return paymentService.getPayment(payId);
+    }
+
     @GetMapping("/getAllPendingPayments/{id}")
-    public List<Payment> getAllPendingPayments(@PathVariable("id") int studentId){
+    public List<Payment> getAllPendingPayments(@PathVariable("id") int studentId) {
 
         List<Payment> payments = paymentService.getAllPaymentsByStudentId(studentId);
         List<Payment> pendingPaymentList = new ArrayList<>();
-        for(Payment payment:payments){
-            if(!payment.getPayStatus()){
+        for (Payment payment : payments) {
+            if (!payment.getPayStatus()) {
                 pendingPaymentList.add(payment);
             }
         }
         return pendingPaymentList;
     }
+
     @GetMapping("/getAllPayments")
-    public List<Payment> getAllPayments(){
+    public List<Payment> getAllPayments() {
         return paymentService.getAllPayments();
     }
+
     @GetMapping("/getAllPaymentsByStudentId/{id}")
-    public List<Payment> getAllPaymentsByStudentId(@PathVariable("id") int studentId){
+    public List<Payment> getAllPaymentsByStudentId(@PathVariable("id") int studentId) {
         return paymentService.getAllPaymentsByStudentId(studentId);
     }
 
-    @PutMapping("/paymentDone")
-    public ResponseEntity<Payment> updatePayment(@RequestBody Payment payment){
+    @PutMapping("/update")
+    public ResponseEntity<Payment> updatePayment(@RequestBody Payment payment) {
         Payment updatedPayment = paymentService.updatePayment(payment);
-        if(updatedPayment == null){
+        if (updatedPayment == null) {
             throw new ResourceNotFoundException("Payment Invalid");
         }
         return ResponseEntity.ok(updatedPayment);

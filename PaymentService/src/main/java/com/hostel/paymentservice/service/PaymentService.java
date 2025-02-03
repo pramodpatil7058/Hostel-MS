@@ -11,4 +11,6 @@ public interface PaymentService {
     List<Payment> getAllPayments();
     Payment updatePayment(Payment payment);
     List<Payment> getAllPaymentsByStudentId(int studentId);
+
+    Payment getPayment(int payId);
 }

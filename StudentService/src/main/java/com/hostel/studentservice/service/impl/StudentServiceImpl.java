@@ -3,6 +3,7 @@ package com.hostel.studentservice.service.impl;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
+import com.hostel.studentservice.exception.NoResourceFoundException;
 import com.hostel.studentservice.externalServices.LeaveServices;
 import com.hostel.studentservice.externalServices.PaymentServices;
 import com.hostel.studentservice.repository.StudentRepository;
@@ -31,16 +32,26 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private LeaveServices leaveServices;
 
+//    @Autowired
+//    private AuthService authService;
+
     private Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
 
     @Override
     public Student saveStudent(Student student) {
-        return studentRepository.save(student);
+//        Student savedStudent = studentRepository.save(student);
+        Student savedStudent = null;
+//        AuthEntity auth = new AuthEntity(savedStudent.getStudentId(), savedStudent.getEmail(), savedStudent.getPassword(), "STUDENT");
+//        authService.register(auth);
+        return savedStudent;
     }
 
     @Override
     public Student getStudentById(int studentId) {
         Student student = studentRepository.findById(studentId).orElse(null);
+        if(student == null){
+            throw new NoResourceFoundException("Student Id Does not exist");
+        }
 //        ArrayList payments = restTemplate.getForObject("http://PaymentService/payment/getAllPaymentsByStudentId/" + studentId, ArrayList.class);
         ArrayList<Payment> payments = paymentServices.getPayments(studentId);
         student.setPayments(payments);
@@ -64,6 +75,9 @@ public class StudentServiceImpl implements StudentService {
     public boolean deleteStudent(int studentId) {
         boolean flag = false;
         Student student = studentRepository.findById(studentId).orElse(null);
+        if(student == null){
+            throw new NoResourceFoundException("Student does not exist");
+        }
         if(student != null){
             studentRepository.deleteById(studentId);
             flag = true;
@@ -100,5 +114,19 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public Leave updateLeave(Leave leave) {
         return leaveServices.updateLeave(leave);
+    }
+
+
+    //?Payment Services
+
+
+    @Override
+    public Payment getPayment(int payId) {
+        return paymentServices.getPaymentByPayId(payId);
+    }
+
+    @Override
+    public Payment updatePayment(Payment payment) {
+        return paymentServices.updatePayment(payment);
     }
 }

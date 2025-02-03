@@ -2,6 +2,7 @@ package com.hostel.studentservice.service;
 
 
 import com.hostel.studentservice.entities.Leave;
+import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
 import org.springframework.stereotype.Service;
 
@@ -18,4 +19,8 @@ public interface StudentService {
     Leave getLeave(int leaveId);
     String deleteLeave(int leaveId);
     Leave updateLeave(Leave leave);
+
+    Payment getPayment(int payId);
+
+    Payment updatePayment(Payment payment);
 }

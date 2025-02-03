@@ -1,10 +1,12 @@
 package com.hostel.studentservice.controller;
 
 import com.hostel.studentservice.entities.Leave;
+import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
+import com.hostel.studentservice.exception.CustomException;
 import com.hostel.studentservice.exception.NoResourceFoundException;
-import com.hostel.studentservice.exception.ServiceNotAvailableException;
 import com.hostel.studentservice.service.StudentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,9 +20,12 @@ public class StudentController {
 
 
     @PostMapping("/saveStudent")
-    public Student saveStudent(@RequestBody Student student) {
-        System.out.println(student);
-        return studentService.saveStudent(student);
+    public Student saveStudent(@Valid @RequestBody Student student) {
+        Student savedStudent =studentService.saveStudent(student);
+        if(savedStudent == null){
+            throw new CustomException("Something went wrong");
+        }
+        return savedStudent;
     }
 
 
@@ -75,7 +80,7 @@ public class StudentController {
     public Leave applyLeave(@RequestBody Leave leave){
         Leave appliedLeave = studentService.applyLeave(leave);
         if(appliedLeave == null){
-            throw new ServiceNotAvailableException();
+            throw new CustomException("Something went wrong");
         }
         return appliedLeave;
     }
@@ -94,4 +99,25 @@ public class StudentController {
     public Leave updateLeave(@RequestBody Leave leave){
         return studentService.updateLeave(leave);
     }
+
+
+//? Student with PaymentService
+
+    @GetMapping("/allPayments/{studentId}")
+    public List<Payment> allPaymentsByStudentId(@PathVariable int studentId){
+        return null;
+    }
+
+    @GetMapping("/payment/{payId}")
+    public Payment getPayment(@PathVariable int payId){
+        return studentService.getPayment(payId);
+    }
+
+    @PutMapping("/payment")
+    public Payment updatePayment(Payment payment){
+        return studentService.updatePayment(payment);
+    }
 }
+
+
+

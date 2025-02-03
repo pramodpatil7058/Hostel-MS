@@ -26,12 +26,12 @@ public class LeaveController {
 
     @GetMapping
     public List<Leave> getAllLeaves(){
-        return null;
+        return leaveService.getAllLeaves();
     }
 
     @GetMapping("/all/{id}")
     public List<Leave> getAllLeavesByStudentId(@PathVariable("id") int studentId){
-        return null;
+        return leaveService.getAllLeavesByStudentId(studentId);
     }
 
     @PutMapping

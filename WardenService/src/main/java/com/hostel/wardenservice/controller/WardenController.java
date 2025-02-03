@@ -57,6 +57,11 @@ public class WardenController {
         return ResponseEntity.ok(pendingPayments);
     }
 
+    @GetMapping("/getAllPayments")
+    public ResponseEntity<List<Payment>> getAllPayments(){
+        List<Payment> payments = wardenServices.getAllPayments();
+        return ResponseEntity.ok(payments);
+    }
     //? Dealing with LeaveService
 
     @GetMapping("/leave/{leaveId}")

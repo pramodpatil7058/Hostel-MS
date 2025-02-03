@@ -16,4 +16,6 @@ public interface PaymentServices {
     Payment addPayment(@RequestBody Payment payment);
     @GetMapping("/payment/getAllPendingPayments/{studentId}")
     List<Payment> getAllPendingPayments(@PathVariable int studentId);
+    @GetMapping("/payment/getAllPayments")
+    List<Payment> getAllPayments();
 }

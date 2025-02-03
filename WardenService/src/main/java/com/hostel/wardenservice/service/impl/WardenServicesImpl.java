@@ -51,13 +51,10 @@ public class WardenServicesImpl implements WardenServices {
 
 
     @Override
-    public String removeStudent(int studentId) throws RuntimeException {
-        try{
-            studentServices.deleteStudent(studentId);
-            return "Deleted Student";
-        }catch (RuntimeException e){
-            return e.getMessage();
-        }
+    public String removeStudent(int studentId)  {
+       studentServices.deleteStudent(studentId);
+        return "Deleted Student";
+
     }
 
 
@@ -67,7 +64,9 @@ public class WardenServicesImpl implements WardenServices {
     @Override
     public Payment addPayment(Payment payment) {
 //        restTemplate.postForLocation("http://PaymentService/payment/addPayment",payment);
-        return paymentServices.addPayment(payment);
+        Payment savedPayment = paymentServices.addPayment(payment);
+        System.out.println(payment);
+        return savedPayment;
     }
 
 
@@ -93,5 +92,10 @@ public class WardenServicesImpl implements WardenServices {
     @Override
     public Leave updateLeave(Leave leave) {
         return leaveServices.updateLeave(leave);
+    }
+
+    @Override
+    public List<Payment> getAllPayments() {
+        return List.of();
     }
 }

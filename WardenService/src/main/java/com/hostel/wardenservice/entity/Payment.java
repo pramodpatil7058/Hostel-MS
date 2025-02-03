@@ -10,8 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Payment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int payId;
     private long amount;
     private int studentId;

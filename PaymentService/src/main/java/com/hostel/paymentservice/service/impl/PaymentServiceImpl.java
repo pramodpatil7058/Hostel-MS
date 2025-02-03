@@ -5,6 +5,7 @@ import com.hostel.paymentservice.repository.PaymentRepository;
 import com.hostel.paymentservice.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.util.List;
 
@@ -42,5 +43,10 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public List<Payment> getAllPaymentsByStudentId(int studentId) {
         return paymentRepository.findByStudentId(studentId);
+    }
+
+    @Override
+    public Payment getPayment(int payId) {
+        return paymentRepository.findById(payId).orElse(null);
     }
 }

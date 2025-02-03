@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
+import java.time.LocalTime;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

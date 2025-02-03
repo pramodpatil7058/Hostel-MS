@@ -17,4 +17,6 @@ public interface WardenServices {
     Leave getLeave(int leaveId);
     String deleteLeave(int leaveId);
     Leave updateLeave(Leave leave);
+
+    List<Payment> getAllPayments();
 }
