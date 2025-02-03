@@ -14,11 +14,7 @@ public class AspectBeforeLogger {
     @Before("execution(* com.hostel.paymentservice.controller.PaymentController.*(..))")
     public void logBeforeAllPaymentController(JoinPoint joinPoint){
         logger.info("Before {}",joinPoint.getSignature().getName());
-        System.out.println("Hello");
     }
 
-//    @Before("* execution(com.hostel.paymentservice.service.impl.PaymentServiceImpl.*(..)")
-//    public void logBeforeAllPaymentServiceImpl(JoinPoint joinPoint){
-//        logger.info("After {}",joinPoint.getSignature().getName());
-//    }
+
 }

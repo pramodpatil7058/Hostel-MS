@@ -18,8 +18,4 @@ public class AspectAfterLogger {
         logger.info("After {}", joinPoint.getSignature().getName());
     }
 
-//    @After("* execution(com.hostel.paymentservice.service.impl.PaymentServiceImpl.*(..)")
-//    public void logAfterAllPaymentServiceImpl(JoinPoint joinPoint) {
-//        logger.info("After {}", joinPoint.getSignature().getName());
-//    }
 }

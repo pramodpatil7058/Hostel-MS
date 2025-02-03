@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
+
+//? This is to specify that this is Eureka Server
 @EnableEurekaServer
 public class ServiceRegistryApplication {
 

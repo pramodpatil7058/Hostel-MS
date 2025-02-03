@@ -1,7 +1,8 @@
-package com.hostel.LeaveService.service;
+package com.hostel.leave_service.service;
 
-import com.hostel.LeaveService.entity.Leave;
 import org.springframework.stereotype.Service;
+
+import com.hostel.leave_service.entity.Leave;
 
 import java.util.List;
 

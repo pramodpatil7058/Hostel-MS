@@ -5,7 +5,7 @@ import com.hostel.wardenservice.entity.Payment;
 import com.hostel.wardenservice.entity.Student;
 import com.hostel.wardenservice.exception.ResourceNotFoundException;
 import com.hostel.wardenservice.service.WardenServices;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,10 +15,12 @@ import java.util.List;
 @RequestMapping("/warden")
 public class WardenController {
 
-    @Autowired
     private WardenServices wardenServices;
 
-
+    public WardenController(WardenServices wardenServices) {
+    	this.wardenServices = wardenServices;
+    }
+    
 //    ? Needed from StudentService
 
 

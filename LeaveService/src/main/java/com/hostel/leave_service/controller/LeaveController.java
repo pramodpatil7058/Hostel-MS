@@ -1,9 +1,9 @@
-package com.hostel.LeaveService.controller;
+package com.hostel.leave_service.controller;
 
-import com.hostel.LeaveService.entity.Leave;
-import com.hostel.LeaveService.service.LeaveService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.hostel.leave_service.entity.Leave;
+import com.hostel.leave_service.service.LeaveService;
 
 import java.util.List;
 
@@ -11,40 +11,49 @@ import java.util.List;
 @RequestMapping("/leave")
 public class LeaveController {
 
-    @Autowired
+    //? Inject the dependancy for Leave Service
     private LeaveService leaveService;
 
+    public LeaveController(LeaveService leaveService) {
+    	this.leaveService = leaveService;
+    }
+    
+    //? Add leave
     @PostMapping
     public Leave addLeave(@RequestBody Leave leave){
         return leaveService.addLeave(leave);
     }
 
+    //? Get leave based on Leave Id
     @GetMapping("/{id}")
     public Leave getLeave(@PathVariable("id") int leaveId){
         return leaveService.getLeave(leaveId);
     }
 
+
+    //? Get all the leaves present
     @GetMapping
     public List<Leave> getAllLeaves(){
         return leaveService.getAllLeaves();
     }
 
-    @GetMapping("/all/{id}")
-    public List<Leave> getAllLeavesByStudentId(@PathVariable("id") int studentId){
+    //? Get all the leaves for a particular student by using Student Id
+    @GetMapping("/getLeavesByStudentId/{studentId}")
+    public List<Leave> getAllLeavesByStudentId(@PathVariable int studentId){
         return leaveService.getAllLeavesByStudentId(studentId);
     }
 
+    //? Update the leave (Warden can approve or reject the leave)
     @PutMapping
     public Leave updateLeave(@RequestBody Leave leave){
         return leaveService.updateLeave(leave);
     }
 
+    //? Delete leave
     @DeleteMapping("/{leaveId}")
     public String deleteLeave(@PathVariable int leaveId){
         return leaveService.deleteLeave(leaveId);
     }
 
-
-//    TODO Implement getAllLeavesByStudentId(for student service), GetAllLeaves( For warden Service)
 
 }

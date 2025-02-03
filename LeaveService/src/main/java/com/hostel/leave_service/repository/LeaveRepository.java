@@ -1,7 +1,8 @@
-package com.hostel.LeaveService.repository;
+package com.hostel.leave_service.repository;
 
-import com.hostel.LeaveService.entity.Leave;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.hostel.leave_service.entity.Leave;
 
 import java.util.List;
 

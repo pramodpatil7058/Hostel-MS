@@ -17,8 +17,4 @@ public class AspectAfterThrowingLogger {
         logger.info("Method {} throws {}",joinPoint.getSignature().getName(),e.getMessage());
     }
 
-//    @AfterThrowing("* execution(com.hostel.paymentservice.service.impl.PaymentServiceImpl.*(..)")
-//    public void beforeAllPaymentServiceImpl(JoinPoint joinPoint,Throwable e){
-//        logger.info("Method {} throws {}",joinPoint.getSignature().getName(),e.getMessage());
-//    }
 }

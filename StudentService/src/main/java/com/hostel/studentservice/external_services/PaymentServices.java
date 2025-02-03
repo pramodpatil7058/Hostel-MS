@@ -1,4 +1,4 @@
-package com.hostel.studentservice.externalServices;
+package com.hostel.studentservice.external_services;
 
 import com.hostel.studentservice.entities.Payment;
 import org.springframework.cloud.openfeign.FeignClient;

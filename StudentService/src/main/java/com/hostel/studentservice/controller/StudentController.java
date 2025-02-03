@@ -7,7 +7,7 @@ import com.hostel.studentservice.exception.CustomException;
 import com.hostel.studentservice.exception.NoResourceFoundException;
 import com.hostel.studentservice.service.StudentService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,10 +15,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/student")
 public class StudentController {
-    @Autowired
+
+    //? Inject the dependency for StudentService
     StudentService studentService;
-
-
+    
+    public StudentController(StudentService studentService) {
+    	this.studentService = studentService;
+    }
+    
+    //? Add a new student
     @PostMapping("/saveStudent")
     public Student saveStudent(@Valid @RequestBody Student student) {
         Student savedStudent =studentService.saveStudent(student);
@@ -28,11 +33,9 @@ public class StudentController {
         return savedStudent;
     }
 
-
-
 //? Needed for both student and warden service
 
-
+    //? Get a student based on student id
     @GetMapping("/getStudentById/{id}")
     public Student getStudentById(@PathVariable("id") int studentId){
         Student student = studentService.getStudentById(studentId);
@@ -42,6 +45,7 @@ public class StudentController {
         return student;
     }
 
+    //? Delete a student
     @DeleteMapping("/deleteStudent/{id}")
     public boolean deleteStudent(@PathVariable("id") int studentId){
 
@@ -51,6 +55,7 @@ public class StudentController {
         return true;
     }
 
+    //? Update a student (Used by warden)
     @PutMapping("/updateStudent")
     public Student updateStudent(@RequestBody Student student){
         Student student1 =studentService.updateStudent(student);
@@ -61,12 +66,9 @@ public class StudentController {
 
     }
 
-
-
 //? Needed for warden service
 
-
-
+    //? Get all the students
     @GetMapping("/getAllStudents")
     public List<Student> getAllStudents(){
         return studentService.getAllStudents();
@@ -75,7 +77,7 @@ public class StudentController {
 
 //    ? Dealing with leaveService
 
-
+    //? Add a leave to Leave Service
     @PostMapping("/leave")
     public Leave applyLeave(@RequestBody Leave leave){
         Leave appliedLeave = studentService.applyLeave(leave);
@@ -85,34 +87,44 @@ public class StudentController {
         return appliedLeave;
     }
 
+    //? Get a leave by leave Id from Leave Service
     @GetMapping("/leave/{leaveId}")
     public Leave getLeave(@PathVariable int leaveId){
         return studentService.getLeave(leaveId);
     }
 
+    //? Delete a leave from Leave service
     @DeleteMapping("/leave/{leaveId}")
     public String deleteLeave(@PathVariable int leaveId){
         return studentService.deleteLeave(leaveId);
     }
 
+    //? Update a leave from Leave Service
     @PutMapping("/leave")
     public Leave updateLeave(@RequestBody Leave leave){
         return studentService.updateLeave(leave);
     }
 
+    @GetMapping("/leave/getLeavesByStudentId/{studentId}")
+    public List<Leave> getLeavesByStudentId(@PathVariable int studentId){
+    	return studentService.getLeavesByStudentId(studentId);
+    }
 
 //? Student with PaymentService
 
+    //? Get all the payments from Payment Service
     @GetMapping("/allPayments/{studentId}")
     public List<Payment> allPaymentsByStudentId(@PathVariable int studentId){
-        return null;
+        return studentService.getPayments(studentId);
     }
 
+    //? Get a single payment from Payment Service
     @GetMapping("/payment/{payId}")
     public Payment getPayment(@PathVariable int payId){
         return studentService.getPayment(payId);
     }
 
+    //? Update a payment to Payment Service
     @PutMapping("/payment")
     public Payment updatePayment(Payment payment){
         return studentService.updatePayment(payment);

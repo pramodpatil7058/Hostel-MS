@@ -8,6 +8,7 @@ class WardenServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		//Tests
 	}
 
 }

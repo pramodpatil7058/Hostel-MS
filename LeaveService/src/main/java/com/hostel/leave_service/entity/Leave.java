@@ -1,4 +1,4 @@
-package com.hostel.LeaveService.entity;
+package com.hostel.leave_service.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

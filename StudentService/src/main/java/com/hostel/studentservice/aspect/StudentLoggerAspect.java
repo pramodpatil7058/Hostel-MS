@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class StudentLoggerAspect {
     private final Logger logger = LoggerFactory.getLogger(StudentLoggerAspect.class);
 
-    @Before("execution(* com.hostel.studentservice.controller.StudentController.*(..)")
+    @Before("execution(* com.hostel.studentservice.service.impl.*.*(..)")
     public void logBeforeAllMethods(JoinPoint joinPoint){
         logger.info("This is before {}",joinPoint.getSignature().getName());
         logger.info("The arguments are: ");

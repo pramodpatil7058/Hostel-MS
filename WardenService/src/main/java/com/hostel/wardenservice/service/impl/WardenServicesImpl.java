@@ -4,37 +4,33 @@ import com.hostel.wardenservice.entity.Leave;
 import com.hostel.wardenservice.entity.Payment;
 import com.hostel.wardenservice.entity.Student;
 import com.hostel.wardenservice.exception.ResourceNotFoundException;
-import com.hostel.wardenservice.externalServices.LeaveServices;
-import com.hostel.wardenservice.externalServices.PaymentServices;
-import com.hostel.wardenservice.externalServices.StudentServices;
+import com.hostel.wardenservice.external_services.LeaveServices;
+import com.hostel.wardenservice.external_services.PaymentServices;
+import com.hostel.wardenservice.external_services.StudentServices;
 import com.hostel.wardenservice.service.WardenServices;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class WardenServicesImpl implements WardenServices {
 
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Autowired
     private StudentServices studentServices;
 
-    @Autowired
     private PaymentServices paymentServices;
 
-    @Autowired
     private LeaveServices leaveServices;
 
+    public WardenServicesImpl(StudentServices studentServices, PaymentServices paymentServices, LeaveServices leaveServices) {
+    	this.leaveServices = leaveServices;
+    	this.paymentServices = paymentServices;
+    	this.studentServices = studentServices;
+    }
+    
     //? Dealing with StudentService
     @Override
     public Student changeApplicationStatus(int studentId, boolean status) {
         try {
-            System.out.println("status "+status);
             Student student = studentServices.getStudent(studentId);
             student.setStatus(status);
             return studentServices.updateStudent(student);
@@ -63,10 +59,7 @@ public class WardenServicesImpl implements WardenServices {
 
     @Override
     public Payment addPayment(Payment payment) {
-//        restTemplate.postForLocation("http://PaymentService/payment/addPayment",payment);
-        Payment savedPayment = paymentServices.addPayment(payment);
-        System.out.println(payment);
-        return savedPayment;
+        return paymentServices.addPayment(payment);
     }
 
 

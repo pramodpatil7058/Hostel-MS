@@ -17,8 +17,5 @@ public class AspectAfterReturningLogger {
         logger.info("AfterReturningLogger {}",joinPoint.getSignature().getName());
     }
 
-//    @AfterReturning("* execution(com.hostel.paymentservice.service.impl.PaymentServiceImpl.*(..)")
-//    public void beforeAllPaymentServiceImpl(JoinPoint joinPoint){
-//        logger.info("After {}",joinPoint.getSignature().getName());
-//    }
+   
 }

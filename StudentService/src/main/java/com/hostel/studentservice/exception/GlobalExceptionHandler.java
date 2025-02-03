@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler
 {
+    //? Handles No Resource Found Exception
     @ExceptionHandler(NoResourceFoundException.class)
     public ResponseEntity<ApiResponse> exceptionHandler(NoResourceFoundException e){
         String message= e.getMessage();
@@ -17,6 +18,7 @@ public class GlobalExceptionHandler
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 
+    //? Checks if validation throws any exception
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiResponse> validationExceptionHandler(MethodArgumentNotValidException e){
         String message = e.getMessage();
@@ -24,10 +26,5 @@ public class GlobalExceptionHandler
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(CustomException.class)
-    public ResponseEntity<ApiResponse> customExceptionHandler(CustomException e){
-        String message = e.getMessage();
-        ApiResponse response = ApiResponse.builder().message(message).httpStatus(HttpStatus.UNPROCESSABLE_ENTITY).success(true).build();
-        return new ResponseEntity<>(response, HttpStatus.UNPROCESSABLE_ENTITY);
-    }
+
 }

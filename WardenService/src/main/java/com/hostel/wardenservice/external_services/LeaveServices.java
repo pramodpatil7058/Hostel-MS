@@ -1,4 +1,4 @@
-package com.hostel.wardenservice.externalServices;
+package com.hostel.wardenservice.external_services;
 
 import com.hostel.wardenservice.entity.Leave;
 import org.springframework.cloud.openfeign.FeignClient;
