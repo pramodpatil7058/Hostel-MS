@@ -1,6 +1,9 @@
 package com.hostel.wardenservice.external_services;
 
 import com.hostel.wardenservice.entity.Leave;
+
+import java.util.List;
+
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,4 +21,7 @@ public interface LeaveServices {
 
     @DeleteMapping("/leave/{leaveId}")
     String deleteLeave(@PathVariable int leaveId);
+    
+    @GetMapping("/leave")
+    List<Leave> getAllLeaves();
 }

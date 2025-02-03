@@ -36,7 +36,6 @@ public class StudentServiceImpl implements StudentService {
     //? Inject a dependency for External LeaveService
     private LeaveServices leaveServices;
     
-
     public StudentServiceImpl(StudentRepository studentRepository, PaymentServices paymentServices, LeaveServices leaveServices) {
     	this.paymentServices = paymentServices;
     	this.leaveServices = leaveServices;
@@ -44,17 +43,19 @@ public class StudentServiceImpl implements StudentService {
     }
     
     //! Logger for StudentServiceImpl class
-    private Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     //? Logic for Saving a student
     @Override
     public Student saveStudent(Student student) {
+    	logger.info("Save student");
         return studentRepository.save(student);
     }
 
     //? Logic for getting a student based on studentId
     @Override
     public Student getStudentById(int studentId) {
+    	logger.info("Get student with student id {}",studentId);
         Student student = studentRepository.findById(studentId).orElse(null);
         if(student == null){
             throw new NoResourceFoundException("Student Id Does not exist");
@@ -67,12 +68,14 @@ public class StudentServiceImpl implements StudentService {
     //? Logic to get All students
     @Override
     public List<Student> getAllStudents() {
+    	logger.info("Get All students");
         return studentRepository.findAll();
     }
 
     //? Logic for deleting a student
     @Override
     public boolean deleteStudent(int studentId) {
+    	logger.info("Delete student with student id {}",studentId);
         boolean flag = false;
         Student student = studentRepository.findById(studentId).orElse(null);
         //! Check if student is not found
@@ -88,6 +91,7 @@ public class StudentServiceImpl implements StudentService {
     //? Logic for updating a student
     @Override
     public Student updateStudent(Student student) {
+    	logger.info("Update student with student id {}",student.getStudentId());
         Student student1 = studentRepository.findById(student.getStudentId()).orElse(null);
         if(student1 == null) {
             return null;
@@ -100,29 +104,34 @@ public class StudentServiceImpl implements StudentService {
     //? Logic for applying leave from studentservice to LeaveService
     @Override
     public Leave applyLeave(Leave leave) {
+    	logger.info("Apply leave in student Service");
         return leaveServices.applyLeave(leave);
     }
 
     //? Logic for getting leave from studentservice to LeaveService
     @Override
     public Leave getLeave(int leaveId) {
+    	logger.info("Get leave with leave id {} from student service",leaveId);
         return leaveServices.getLeave(leaveId);
     }
 
     //? Logic for deleting leave from studentservice to LeaveService
     @Override
     public String deleteLeave(int leaveId) {
+    	logger.info("Delete leave with leave id {} from student service",leaveId);
         return leaveServices.deleteLeave(leaveId);
     }
 
     //? Logic for updating leave from studentservice to LeaveService
     @Override
     public Leave updateLeave(Leave leave) {
+    	logger.info("Update leave with leave id {} from student service",leave.getLeaveId());
         return leaveServices.updateLeave(leave);
     }
     
 	@Override
 	public List<Leave> getLeavesByStudentId(int studentId) {
+		logger.info("Get all leaves of studentId {} from student service",studentId);
 		return leaveServices.getLeavesByStudentId(studentId);
 	}
     //?Payment Services
@@ -131,17 +140,20 @@ public class StudentServiceImpl implements StudentService {
     //?Logic to get payment from paymentService to StudentService
     @Override
     public Payment getPayment(int payId) {
+    	logger.info("Get payment with payment id {}",payId);
         return paymentServices.getPaymentByPayId(payId);
     }
 
     //? Logic for updating Payment from studentService to paymentService
     @Override
     public Payment updatePayment(Payment payment) {
+    	logger.info("Update the payment with payment id {}", payment.getPayId());
         return paymentServices.updatePayment(payment);
     }
 
 	@Override
 	public List<Payment> getPayments(int studentId) {
+		logger.info("Get all payments for student id {}",studentId);
 		Student student = studentRepository.findById(studentId).orElse(null);
 		if(student == null) {
 			throw new NoResourceFoundException("Student Id does not exist");
