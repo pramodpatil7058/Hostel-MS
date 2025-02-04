@@ -3,6 +3,7 @@ package com.hostel.wardenservice.service.impl;
 import com.hostel.wardenservice.entity.Leave;
 import com.hostel.wardenservice.entity.Payment;
 import com.hostel.wardenservice.entity.Student;
+import com.hostel.wardenservice.exception.IncompleteTransactionException;
 import com.hostel.wardenservice.exception.ResourceNotFoundException;
 import com.hostel.wardenservice.external_services.LeaveServices;
 import com.hostel.wardenservice.external_services.PaymentServices;
@@ -36,13 +37,19 @@ public class WardenServicesImpl implements WardenServices {
     @Override
     public Student changeApplicationStatus(int studentId, boolean status) {
     	logger.info("Change application status of student id {} to {}", studentId, status);
-        try {
             Student student = studentServices.getStudent(studentId);
+            if(student == null) {
+            	throw new ResourceNotFoundException("Student does not exists.");
+            }
+            
+            List<Payment> payments = paymentServices.getAllPendingPayments(studentId);
+            
+            if(payments.isEmpty()) {
+            	throw new IncompleteTransactionException("No payments are done by this student");
+            }
+            
             student.setStatus(status);
             return studentServices.updateStudent(student);
-        }catch(ResourceNotFoundException e){
-            return null;
-        }
     }
 
     @Override
@@ -85,24 +92,36 @@ public class WardenServicesImpl implements WardenServices {
     @Override
     public Leave getLeave(int leaveId) {
     	logger.info("Get leave with leave id {}",leaveId);
-        return leaveServices.getLeave(leaveId);
+    	Leave leave = leaveServices.getLeave(leaveId);
+    	if(leave == null) {
+    		throw new ResourceNotFoundException("Leave id does not exist");
+    	}
+        return leave;
     }
 
     @Override
     public String deleteLeave(int leaveId) {
     	logger.info("Delete a leave with leave id {}",leaveId);
-        return leaveServices.deleteLeave(leaveId);
+    	String res = leaveServices.deleteLeave(leaveId);
+    	if(res == null) {
+    		throw new ResourceNotFoundException("Leave id does not exist");
+    	}
+        return res;
     }
 
     @Override
     public Leave updateLeave(Leave leave) {
     	logger.info("Update leave with leave id {} to status {}", leave.getLeaveId(), leave.getStatus());
-        return leaveServices.updateLeave(leave);
+    	Leave updated = leaveServices.updateLeave(leave);
+    	if(updated == null) {
+    		throw new ResourceNotFoundException("Something went wrong");
+    	}
+        return updated;
     }
 
     @Override
     public List<Payment> getAllPayments() {
     	logger.info("Get all payments");
-        return List.of();
+        return paymentServices.getAllPayments();
     }
 }

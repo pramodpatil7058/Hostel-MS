@@ -1,12 +1,13 @@
 package com.hostel.paymentservice.service.impl;
 
 import com.hostel.paymentservice.entity.Payment;
+import com.hostel.paymentservice.exception.ResourceAlreadyExistsException;
+import com.hostel.paymentservice.exception.ResourceNotFoundException;
 import com.hostel.paymentservice.repository.PaymentRepository;
 import com.hostel.paymentservice.service.PaymentService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,7 +44,7 @@ public class PaymentServiceImpl implements PaymentService {
     	logger.info("Updated payment with payment Id {}",payment.getPayId());
         Payment oldPayment = paymentRepository.findById(payment.getPayId()).orElse(null);
         if(oldPayment == null){
-            return null;
+        	return null;
         }
         Payment tranPayment = paymentRepository.findPaymentByTransactionId(payment.getTransactionId());
         if(tranPayment !=null){
@@ -52,6 +53,7 @@ public class PaymentServiceImpl implements PaymentService {
         oldPayment.setTransactionId(payment.getTransactionId());
         oldPayment.setPayDate(payment.getPayDate());
         oldPayment.setPayStatus(true);
+        logger.info("updated payment {}",oldPayment);
         return paymentRepository.save(oldPayment);
     }
 
@@ -59,13 +61,16 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public List<Payment> getAllPaymentsByStudentId(int studentId) {
     	logger.info("Get all payments for student id {}",studentId);
-        return paymentRepository.findByStudentId(studentId);
+    	List<Payment> payments = paymentRepository.findByStudentId(studentId);
+    	logger.info("Payments by studentId {}",payments);
+        return payments;
     }
 
     //? Logic to get a payment based on paymentID
     @Override
     public Payment getPayment(int payId) {
     	logger.info("Get payment with payment id {}",payId);
-        return paymentRepository.findById(payId).orElse(null);
+    	Payment payment = paymentRepository.findById(payId).orElse(null);
+        return payment;
     }
 }

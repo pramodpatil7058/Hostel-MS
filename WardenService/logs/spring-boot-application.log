@@ -1,0 +1,623 @@
+2025-02-04T09:09:35.421+05:30  INFO 22084 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 22084 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T09:09:35.424+05:30  INFO 22084 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T09:09:35.494+05:30  INFO 22084 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T09:09:35.494+05:30  INFO 22084 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T09:09:36.595+05:30  INFO 22084 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T09:09:36.632+05:30  INFO 22084 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-02-04T09:09:37.024+05:30  INFO 22084 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T09:09:37.578+05:30  INFO 22084 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-02-04T09:09:37.598+05:30  INFO 22084 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T09:09:37.598+05:30  INFO 22084 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T09:09:37.688+05:30  INFO 22084 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T09:09:37.689+05:30  INFO 22084 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2191 ms
+2025-02-04T09:09:37.902+05:30  INFO 22084 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T09:09:37.991+05:30  INFO 22084 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T09:09:38.039+05:30  INFO 22084 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T09:09:38.505+05:30  INFO 22084 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T09:09:38.563+05:30  INFO 22084 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T09:09:39.071+05:30  INFO 22084 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@306bf4c3
+2025-02-04T09:09:39.074+05:30  INFO 22084 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T09:09:39.157+05:30  WARN 22084 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T09:09:39.187+05:30  INFO 22084 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T09:09:40.437+05:30  INFO 22084 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T09:09:40.530+05:30  INFO 22084 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T09:09:40.668+05:30  WARN 22084 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T09:09:40.819+05:30  INFO 22084 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T09:09:40.884+05:30  INFO 22084 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T09:09:40.904+05:30  INFO 22084 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T09:09:41.454+05:30  INFO 22084 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T09:09:41.482+05:30  WARN 22084 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T09:09:41.536+05:30  INFO 22084 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T09:09:41.561+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T09:09:41.567+05:30  INFO 22084 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:09:41.574+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T09:09:41.575+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T09:09:41.575+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T09:09:41.575+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T09:09:41.575+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T09:09:41.575+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T09:09:41.575+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T09:09:41.827+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T09:09:41.830+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T09:09:41.833+05:30  INFO 22084 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T09:09:41.835+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738640381835 with initial instances count: 2
+2025-02-04T09:09:41.840+05:30  INFO 22084 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T09:09:41.841+05:30  INFO 22084 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738640381841, current=UP, previous=STARTING]
+2025-02-04T09:09:41.844+05:30  INFO 22084 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T09:09:41.868+05:30  INFO 22084 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-02-04T09:09:41.870+05:30  INFO 22084 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-02-04T09:09:41.881+05:30  INFO 22084 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 8.618 seconds (process running for 9.588)
+2025-02-04T09:09:41.895+05:30  INFO 22084 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T09:14:41.577+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:19:41.593+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:24:41.596+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:29:41.605+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:34:41.622+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:39:41.625+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:44:41.627+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:49:41.632+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:54:41.649+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:59:41.656+05:30  INFO 22084 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:03:40.719+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T10:03:40.738+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WARDENSERVICE with eureka with status DOWN
+2025-02-04T10:03:40.739+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738643620739, current=DOWN, previous=UP]
+2025-02-04T10:03:40.740+05:30  INFO 22084 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T10:03:40.768+05:30  INFO 22084 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T10:03:40.770+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T10:03:40.783+05:30  INFO 22084 --- [WardenService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T10:03:40.809+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T10:03:40.826+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T10:03:40.838+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T10:03:40.839+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T10:03:43.842+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T10:03:43.859+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - deregister  status: 200
+2025-02-04T10:03:43.860+05:30  INFO 22084 --- [WardenService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T10:04:00.063+05:30  INFO 26208 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 26208 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T10:04:00.070+05:30  INFO 26208 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T10:04:00.164+05:30  INFO 26208 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T10:04:00.164+05:30  INFO 26208 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T10:04:01.295+05:30  INFO 26208 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T10:04:01.346+05:30  INFO 26208 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JPA repository interfaces.
+2025-02-04T10:04:01.827+05:30  INFO 26208 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T10:04:02.344+05:30  INFO 26208 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-02-04T10:04:02.374+05:30  INFO 26208 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T10:04:02.374+05:30  INFO 26208 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T10:04:02.475+05:30  INFO 26208 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T10:04:02.475+05:30  INFO 26208 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2306 ms
+2025-02-04T10:04:02.641+05:30  INFO 26208 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T10:04:02.709+05:30  INFO 26208 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T10:04:02.752+05:30  INFO 26208 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T10:04:03.270+05:30  INFO 26208 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T10:04:03.371+05:30  INFO 26208 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T10:04:05.087+05:30  INFO 26208 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b9fea11
+2025-02-04T10:04:05.089+05:30  INFO 26208 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T10:04:05.237+05:30  WARN 26208 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T10:04:05.294+05:30  INFO 26208 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T10:04:08.573+05:30  INFO 26208 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T10:04:08.777+05:30  INFO 26208 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T10:04:09.104+05:30  WARN 26208 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T10:04:09.469+05:30  INFO 26208 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T10:04:09.644+05:30  INFO 26208 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T10:04:09.692+05:30  INFO 26208 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T10:04:11.053+05:30  INFO 26208 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T10:04:11.140+05:30  WARN 26208 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T10:04:11.300+05:30  INFO 26208 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T10:04:11.390+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T10:04:11.403+05:30  INFO 26208 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:04:11.445+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T10:04:11.446+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T10:04:11.446+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T10:04:11.446+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T10:04:11.447+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T10:04:11.447+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T10:04:11.448+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T10:04:12.125+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T10:04:12.132+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T10:04:12.139+05:30  INFO 26208 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T10:04:12.142+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738643652142 with initial instances count: 3
+2025-02-04T10:04:12.152+05:30  INFO 26208 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T10:04:12.154+05:30  INFO 26208 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738643652154, current=UP, previous=STARTING]
+2025-02-04T10:04:12.159+05:30  INFO 26208 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T10:04:12.214+05:30  INFO 26208 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-02-04T10:04:12.216+05:30  INFO 26208 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-02-04T10:04:12.248+05:30  INFO 26208 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 14.733 seconds (process running for 16.132)
+2025-02-04T10:04:12.270+05:30  INFO 26208 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T10:07:23.822+05:30  INFO 26208 --- [WardenService] [http-nio-8087-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-04T10:07:23.822+05:30  INFO 26208 --- [WardenService] [http-nio-8087-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-04T10:07:23.822+05:30  INFO 26208 --- [WardenService] [http-nio-8087-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-02-04T10:07:24.022+05:30  INFO 26208 --- [WardenService] [http-nio-8087-exec-2] c.h.w.service.impl.WardenServicesImpl    : Change application status of student id 1 to true
+2025-02-04T10:07:51.405+05:30  INFO 26208 --- [WardenService] [http-nio-8087-exec-3] c.h.w.service.impl.WardenServicesImpl    : Add a payment
+2025-02-04T10:08:03.628+05:30  INFO 26208 --- [WardenService] [http-nio-8087-exec-4] c.h.w.service.impl.WardenServicesImpl    : Add a payment
+2025-02-04T10:09:11.470+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:14:11.474+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:19:11.481+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:05:44.076+05:30  WARN 26208 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h42m38s626ms949µs400ns).
+2025-02-04T12:06:20.059+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:11:20.062+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:29:16.924+05:30  WARN 26208 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m32s709ms668µs100ns).
+2025-02-04T12:30:22.769+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:35:22.780+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:51:32.139+05:30  WARN 26208 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m15s60ms502µs100ns).
+2025-02-04T12:54:07.851+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:59:07.852+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:04:07.869+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:09:07.873+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:14:07.884+05:30  INFO 26208 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:14:34.611+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T13:14:34.641+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WARDENSERVICE with eureka with status DOWN
+2025-02-04T13:14:34.641+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738655074641, current=DOWN, previous=UP]
+2025-02-04T13:14:34.642+05:30  INFO 26208 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T13:14:34.672+05:30  INFO 26208 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T13:14:34.694+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T13:14:34.714+05:30  INFO 26208 --- [WardenService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T13:14:34.757+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T13:14:34.796+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T13:14:34.803+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T13:14:34.805+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T13:14:37.820+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T13:14:37.867+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - deregister  status: 200
+2025-02-04T13:14:37.868+05:30  INFO 26208 --- [WardenService] [RMI TCP Connection(79)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T13:14:47.259+05:30  INFO 7260 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 7260 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T13:14:47.261+05:30  INFO 7260 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T13:14:47.324+05:30  INFO 7260 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T13:14:47.325+05:30  INFO 7260 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T13:14:47.919+05:30  INFO 7260 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T13:14:47.941+05:30  INFO 7260 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2025-02-04T13:14:48.180+05:30  INFO 7260 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T13:14:48.538+05:30  INFO 7260 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-02-04T13:14:48.549+05:30  INFO 7260 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T13:14:48.549+05:30  INFO 7260 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T13:14:48.630+05:30  INFO 7260 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T13:14:48.631+05:30  INFO 7260 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
+2025-02-04T13:14:48.773+05:30  INFO 7260 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T13:14:48.837+05:30  INFO 7260 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T13:14:48.873+05:30  INFO 7260 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T13:14:49.142+05:30  INFO 7260 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T13:14:49.173+05:30  INFO 7260 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T13:14:49.483+05:30  INFO 7260 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6108fd23
+2025-02-04T13:14:49.486+05:30  INFO 7260 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T13:14:49.530+05:30  WARN 7260 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T13:14:49.549+05:30  INFO 7260 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T13:14:50.309+05:30  INFO 7260 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T13:14:50.379+05:30  INFO 7260 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T13:14:50.476+05:30  WARN 7260 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T13:14:50.570+05:30  INFO 7260 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:14:50.612+05:30  INFO 7260 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:14:50.630+05:30  INFO 7260 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:14:50.982+05:30  INFO 7260 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T13:14:51.004+05:30  WARN 7260 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T13:14:51.046+05:30  INFO 7260 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T13:14:51.068+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T13:14:51.071+05:30  INFO 7260 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:14:51.078+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T13:14:51.078+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T13:14:51.079+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T13:14:51.079+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T13:14:51.079+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T13:14:51.079+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T13:14:51.080+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T13:14:51.290+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T13:14:51.292+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T13:14:51.294+05:30  INFO 7260 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T13:14:51.296+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738655091295 with initial instances count: 6
+2025-02-04T13:14:51.300+05:30  INFO 7260 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T13:14:51.300+05:30  INFO 7260 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738655091300, current=UP, previous=STARTING]
+2025-02-04T13:14:51.302+05:30  INFO 7260 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T13:14:51.323+05:30  INFO 7260 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-02-04T13:14:51.323+05:30  INFO 7260 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-02-04T13:14:51.334+05:30  INFO 7260 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 6.151 seconds (process running for 6.891)
+2025-02-04T13:14:51.342+05:30  INFO 7260 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T13:15:30.406+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T13:15:30.407+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WARDENSERVICE with eureka with status DOWN
+2025-02-04T13:15:30.407+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738655130407, current=DOWN, previous=UP]
+2025-02-04T13:15:30.407+05:30  INFO 7260 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T13:15:30.409+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T13:15:30.414+05:30  INFO 7260 --- [WardenService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T13:15:30.416+05:30  INFO 7260 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T13:15:30.421+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T13:15:30.423+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T13:15:30.428+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T13:15:30.429+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T13:15:33.440+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T13:15:33.458+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - deregister  status: 200
+2025-02-04T13:15:33.458+05:30  INFO 7260 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T13:15:42.190+05:30  INFO 26308 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 26308 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T13:15:42.192+05:30  INFO 26308 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T13:15:42.234+05:30  INFO 26308 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T13:15:42.234+05:30  INFO 26308 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T13:15:42.829+05:30  INFO 26308 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T13:15:42.852+05:30  INFO 26308 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2025-02-04T13:15:43.060+05:30  INFO 26308 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T13:15:43.409+05:30  INFO 26308 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-02-04T13:15:43.419+05:30  INFO 26308 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T13:15:43.419+05:30  INFO 26308 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T13:15:43.495+05:30  INFO 26308 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T13:15:43.500+05:30  INFO 26308 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1264 ms
+2025-02-04T13:15:43.626+05:30  INFO 26308 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T13:15:43.674+05:30  INFO 26308 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T13:15:43.701+05:30  INFO 26308 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T13:15:43.945+05:30  INFO 26308 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T13:15:43.977+05:30  INFO 26308 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T13:15:44.283+05:30  INFO 26308 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ee22768
+2025-02-04T13:15:44.285+05:30  INFO 26308 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T13:15:44.343+05:30  WARN 26308 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T13:15:44.385+05:30  INFO 26308 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T13:15:45.130+05:30  INFO 26308 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T13:15:45.211+05:30  INFO 26308 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T13:15:45.406+05:30  WARN 26308 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T13:15:45.528+05:30  INFO 26308 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:15:45.575+05:30  INFO 26308 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:15:45.600+05:30  INFO 26308 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:15:46.067+05:30  INFO 26308 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T13:15:46.091+05:30  WARN 26308 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T13:15:46.142+05:30  INFO 26308 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T13:15:46.171+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T13:15:46.176+05:30  INFO 26308 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:15:46.189+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T13:15:46.190+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T13:15:46.190+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T13:15:46.190+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T13:15:46.190+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T13:15:46.190+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T13:15:46.191+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T13:15:46.452+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T13:15:46.454+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T13:15:46.457+05:30  INFO 26308 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T13:15:46.459+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738655146459 with initial instances count: 5
+2025-02-04T13:15:46.465+05:30  INFO 26308 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T13:15:46.466+05:30  INFO 26308 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738655146466, current=UP, previous=STARTING]
+2025-02-04T13:15:46.468+05:30  INFO 26308 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T13:15:46.491+05:30  INFO 26308 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-02-04T13:15:46.492+05:30  INFO 26308 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-02-04T13:15:46.505+05:30  INFO 26308 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 6.244 seconds (process running for 7.001)
+2025-02-04T13:15:46.539+05:30  INFO 26308 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T13:16:20.533+05:30  INFO 26308 --- [WardenService] [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-04T13:16:20.533+05:30  INFO 26308 --- [WardenService] [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-04T13:16:20.537+05:30  INFO 26308 --- [WardenService] [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-02-04T13:16:20.709+05:30  INFO 26308 --- [WardenService] [http-nio-8087-exec-1] c.h.w.service.impl.WardenServicesImpl    : Change application status of student id 3 to true
+2025-02-04T13:17:48.933+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T13:17:48.934+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WARDENSERVICE with eureka with status DOWN
+2025-02-04T13:17:48.934+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738655268934, current=DOWN, previous=UP]
+2025-02-04T13:17:48.934+05:30  INFO 26308 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T13:17:48.938+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T13:17:48.944+05:30  INFO 26308 --- [WardenService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T13:17:48.950+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T13:17:48.953+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T13:17:48.955+05:30  INFO 26308 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T13:17:48.962+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T13:17:48.962+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T13:17:51.966+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T13:17:51.983+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - deregister  status: 200
+2025-02-04T13:17:51.984+05:30  INFO 26308 --- [WardenService] [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T13:18:00.395+05:30  INFO 28912 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 28912 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T13:18:00.397+05:30  INFO 28912 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T13:18:00.445+05:30  INFO 28912 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T13:18:00.446+05:30  INFO 28912 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T13:18:01.007+05:30  INFO 28912 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T13:18:01.029+05:30  INFO 28912 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2025-02-04T13:18:01.251+05:30  INFO 28912 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T13:18:01.599+05:30  INFO 28912 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-02-04T13:18:01.610+05:30  INFO 28912 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T13:18:01.610+05:30  INFO 28912 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T13:18:01.691+05:30  INFO 28912 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T13:18:01.692+05:30  INFO 28912 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1245 ms
+2025-02-04T13:18:01.828+05:30  INFO 28912 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T13:18:01.875+05:30  INFO 28912 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T13:18:01.907+05:30  INFO 28912 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T13:18:02.143+05:30  INFO 28912 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T13:18:02.172+05:30  INFO 28912 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T13:18:02.488+05:30  INFO 28912 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66abc325
+2025-02-04T13:18:02.490+05:30  INFO 28912 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T13:18:02.540+05:30  WARN 28912 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T13:18:02.559+05:30  INFO 28912 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T13:18:03.313+05:30  INFO 28912 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T13:18:03.388+05:30  INFO 28912 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T13:18:03.485+05:30  WARN 28912 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T13:18:03.579+05:30  INFO 28912 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:18:03.631+05:30  INFO 28912 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:18:03.647+05:30  INFO 28912 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T13:18:04.039+05:30  INFO 28912 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T13:18:04.065+05:30  WARN 28912 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T13:18:04.114+05:30  INFO 28912 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T13:18:04.134+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T13:18:04.140+05:30  INFO 28912 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:18:04.147+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T13:18:04.148+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T13:18:04.148+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T13:18:04.148+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T13:18:04.148+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T13:18:04.148+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T13:18:04.148+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T13:18:04.475+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T13:18:04.484+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T13:18:04.486+05:30  INFO 28912 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T13:18:04.487+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738655284487 with initial instances count: 6
+2025-02-04T13:18:04.492+05:30  INFO 28912 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T13:18:04.493+05:30  INFO 28912 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738655284493, current=UP, previous=STARTING]
+2025-02-04T13:18:04.495+05:30  INFO 28912 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T13:18:04.540+05:30  INFO 28912 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-02-04T13:18:04.544+05:30  INFO 28912 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-02-04T13:18:04.563+05:30  INFO 28912 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 6.123 seconds (process running for 6.841)
+2025-02-04T13:18:04.580+05:30  INFO 28912 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T13:18:37.910+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-04T13:18:37.910+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-04T13:18:37.912+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-04T13:18:37.980+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-1] c.h.w.service.impl.WardenServicesImpl    : Change application status of student id 3 to true
+2025-02-04T13:19:05.973+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-3] c.h.w.service.impl.WardenServicesImpl    : Add a payment
+2025-02-04T13:19:20.576+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-4] c.h.w.service.impl.WardenServicesImpl    : Add a payment
+2025-02-04T13:19:30.271+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-5] c.h.w.service.impl.WardenServicesImpl    : Change application status of student id 3 to true
+2025-02-04T13:19:30.346+05:30 ERROR 28912 --- [WardenService] [http-nio-8087-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: feign.FeignException$InternalServerError: [500] during [PUT] to [http://STUDENTSERVICE/student/updateStudent] [StudentServices#updateStudent(Student)]: [{"timestamp":"2025-02-04T07:49:30.335+00:00","status":500,"error":"Internal Server Error","path":"/student/updateStudent"}]] with root cause
+
+feign.FeignException$InternalServerError: [500] during [PUT] to [http://STUDENTSERVICE/student/updateStudent] [StudentServices#updateStudent(Student)]: [{"timestamp":"2025-02-04T07:49:30.335+00:00","status":500,"error":"Internal Server Error","path":"/student/updateStudent"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:281) ~[feign-core-13.5.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:226) ~[feign-core-13.5.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:213) ~[feign-core-13.5.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:103) ~[feign-core-13.5.jar:na]
+	at feign.InvocationContext.decodeError(InvocationContext.java:133) ~[feign-core-13.5.jar:na]
+	at feign.InvocationContext.proceed(InvocationContext.java:80) ~[feign-core-13.5.jar:na]
+	at feign.ResponseHandler.handleResponse(ResponseHandler.java:69) ~[feign-core-13.5.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:109) ~[feign-core-13.5.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:53) ~[feign-core-13.5.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:104) ~[feign-core-13.5.jar:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy134.updateStudent(Unknown Source) ~[na:na]
+	at com.hostel.wardenservice.service.impl.WardenServicesImpl.changeApplicationStatus(WardenServicesImpl.java:52) ~[classes/:na]
+	at com.hostel.wardenservice.controller.WardenController.changeApplicationStatus(WardenController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-02-04T13:21:20.375+05:30  INFO 28912 --- [WardenService] [http-nio-8087-exec-8] c.h.w.service.impl.WardenServicesImpl    : Change application status of student id 3 to true
+2025-02-04T13:22:42.786+05:30  WARN 28912 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s137ms366µs300ns).
+2025-02-04T14:12:18.028+05:30  WARN 28912 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m35s230ms740µs300ns).
+2025-02-04T14:12:19.467+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:17:19.472+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:22:19.472+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:27:19.489+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:32:19.499+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:37:19.504+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:42:19.508+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:47:19.512+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:52:19.526+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:57:19.528+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:02:19.536+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:07:19.542+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:12:48.109+05:30  WARN 28912 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m29s134ms394µs100ns).
+2025-02-04T15:13:42.106+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:18:42.109+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:23:42.114+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:28:42.127+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:33:42.135+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:38:42.149+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:12:00.653+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:12:07.119+05:30  WARN 28912 --- [WardenService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m48s510ms390µs800ns).
+2025-02-04T16:17:00.661+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:22:00.669+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:27:00.682+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:32:00.696+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:37:00.707+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:37:28.084+05:30  INFO 13572 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 13572 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T16:37:28.086+05:30  INFO 13572 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T16:37:28.130+05:30  INFO 13572 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T16:37:28.130+05:30  INFO 13572 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T16:37:28.736+05:30  INFO 13572 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T16:37:28.762+05:30  INFO 13572 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2025-02-04T16:37:28.965+05:30  INFO 13572 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T16:37:29.300+05:30  INFO 13572 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8097 (http)
+2025-02-04T16:37:29.310+05:30  INFO 13572 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T16:37:29.310+05:30  INFO 13572 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T16:37:29.376+05:30  INFO 13572 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T16:37:29.377+05:30  INFO 13572 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1245 ms
+2025-02-04T16:37:29.502+05:30  INFO 13572 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T16:37:29.545+05:30  INFO 13572 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T16:37:29.571+05:30  INFO 13572 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T16:37:29.868+05:30  INFO 13572 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T16:37:29.931+05:30  INFO 13572 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T16:37:30.286+05:30  INFO 13572 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6108fd23
+2025-02-04T16:37:30.291+05:30  INFO 13572 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T16:37:30.358+05:30  WARN 13572 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T16:37:30.375+05:30  INFO 13572 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T16:37:31.307+05:30  INFO 13572 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T16:37:31.356+05:30  INFO 13572 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:37:31.446+05:30  WARN 13572 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T16:37:31.549+05:30  INFO 13572 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T16:37:31.597+05:30  INFO 13572 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T16:37:31.611+05:30  INFO 13572 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T16:37:32.026+05:30  INFO 13572 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T16:37:32.060+05:30  WARN 13572 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T16:37:32.139+05:30  INFO 13572 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T16:37:32.160+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T16:37:32.166+05:30  INFO 13572 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:37:32.175+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T16:37:32.176+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T16:37:32.176+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T16:37:32.176+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T16:37:32.176+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T16:37:32.176+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T16:37:32.177+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T16:37:32.390+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T16:37:32.391+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T16:37:32.393+05:30  INFO 13572 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T16:37:32.395+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738667252395 with initial instances count: 7
+2025-02-04T16:37:32.397+05:30  INFO 13572 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T16:37:32.398+05:30  INFO 13572 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667252398, current=UP, previous=STARTING]
+2025-02-04T16:37:32.399+05:30  INFO 13572 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8097: registering service...
+2025-02-04T16:37:32.420+05:30  INFO 13572 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8097 (http) with context path '/'
+2025-02-04T16:37:32.421+05:30  INFO 13572 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8097
+2025-02-04T16:37:32.432+05:30  INFO 13572 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 6.33 seconds (process running for 7.001)
+2025-02-04T16:37:32.442+05:30  INFO 13572 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8097 - registration status: 204
+2025-02-04T16:42:00.715+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:42:32.184+05:30  INFO 13572 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:47:00.726+05:30  INFO 28912 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:47:32.186+05:30  INFO 13572 --- [WardenService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:49:39.605+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T16:49:39.608+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WARDENSERVICE with eureka with status DOWN
+2025-02-04T16:49:39.608+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667979608, current=DOWN, previous=UP]
+2025-02-04T16:49:39.609+05:30  INFO 13572 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8097: registering service...
+2025-02-04T16:49:39.615+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T16:49:39.624+05:30  INFO 13572 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8097 - registration status: 204
+2025-02-04T16:49:39.639+05:30  INFO 13572 --- [WardenService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T16:49:39.652+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:49:39.657+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T16:49:39.678+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T16:49:39.680+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T16:49:39.706+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T16:49:39.766+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application WARDENSERVICE with eureka with status DOWN
+2025-02-04T16:49:39.766+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667979766, current=DOWN, previous=UP]
+2025-02-04T16:49:39.767+05:30  INFO 28912 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T16:49:39.784+05:30  INFO 28912 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204
+2025-02-04T16:49:39.834+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T16:49:39.863+05:30  INFO 28912 --- [WardenService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T16:49:39.905+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:49:39.935+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T16:49:39.946+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T16:49:39.947+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T16:49:42.689+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T16:49:42.709+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8097 - deregister  status: 200
+2025-02-04T16:49:42.712+05:30  INFO 13572 --- [WardenService] [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T16:49:42.949+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T16:49:42.961+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - deregister  status: 200
+2025-02-04T16:49:42.962+05:30  INFO 28912 --- [WardenService] [RMI TCP Connection(147)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T16:49:59.231+05:30  INFO 13900 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Starting WardenServiceApplication using Java 23.0.1 with PID 13900 (C:\Users\2380241\Hostel-Ms\WardenService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\WardenService)
+2025-02-04T16:49:59.234+05:30  INFO 13900 --- [WardenService] [main] c.h.w.WardenServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T16:49:59.309+05:30  INFO 13900 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T16:49:59.309+05:30  INFO 13900 --- [WardenService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=WardenService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T16:50:00.156+05:30  INFO 13900 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T16:50:00.206+05:30  INFO 13900 --- [WardenService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-02-04T16:50:00.512+05:30  INFO 13900 --- [WardenService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=41d7876b-a0d5-306a-8faf-192f90299e93
+2025-02-04T16:50:00.923+05:30  INFO 13900 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8087 (http)
+2025-02-04T16:50:00.937+05:30  INFO 13900 --- [WardenService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T16:50:00.938+05:30  INFO 13900 --- [WardenService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T16:50:01.008+05:30  INFO 13900 --- [WardenService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T16:50:01.009+05:30  INFO 13900 --- [WardenService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1699 ms
+2025-02-04T16:50:01.238+05:30  INFO 13900 --- [WardenService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T16:50:01.340+05:30  INFO 13900 --- [WardenService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-02-04T16:50:01.394+05:30  INFO 13900 --- [WardenService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T16:50:01.728+05:30  INFO 13900 --- [WardenService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T16:50:01.765+05:30  INFO 13900 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T16:50:02.148+05:30  INFO 13900 --- [WardenService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5eba9e41
+2025-02-04T16:50:02.152+05:30  INFO 13900 --- [WardenService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T16:50:02.228+05:30  WARN 13900 --- [WardenService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T16:50:02.264+05:30  INFO 13900 --- [WardenService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T16:50:03.315+05:30  INFO 13900 --- [WardenService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T16:50:03.380+05:30  INFO 13900 --- [WardenService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:50:03.477+05:30  WARN 13900 --- [WardenService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T16:50:03.603+05:30  INFO 13900 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'STUDENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T16:50:03.673+05:30  INFO 13900 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'PAYMENTSERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T16:50:03.703+05:30  INFO 13900 --- [WardenService] [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'LEAVESERVICE' URL not provided. Will try picking an instance via load-balancing.
+2025-02-04T16:50:04.382+05:30  INFO 13900 --- [WardenService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T16:50:04.446+05:30  WARN 13900 --- [WardenService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T16:50:04.570+05:30  INFO 13900 --- [WardenService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T16:50:04.603+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T16:50:04.611+05:30  INFO 13900 --- [WardenService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:50:04.625+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T16:50:04.626+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T16:50:04.627+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T16:50:04.627+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T16:50:04.627+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T16:50:04.627+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T16:50:04.627+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T16:50:05.038+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T16:50:05.039+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T16:50:05.043+05:30  INFO 13900 --- [WardenService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T16:50:05.047+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738668005046 with initial instances count: 3
+2025-02-04T16:50:05.058+05:30  INFO 13900 --- [WardenService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WARDENSERVICE with eureka with status UP
+2025-02-04T16:50:05.060+05:30  INFO 13900 --- [WardenService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738668005060, current=UP, previous=STARTING]
+2025-02-04T16:50:05.064+05:30  INFO 13900 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087: registering service...
+2025-02-04T16:50:05.098+05:30  INFO 13900 --- [WardenService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8087 (http) with context path '/'
+2025-02-04T16:50:05.099+05:30  INFO 13900 --- [WardenService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8087
+2025-02-04T16:50:05.120+05:30  INFO 13900 --- [WardenService] [main] c.h.w.WardenServiceApplication           : Started WardenServiceApplication in 7.824 seconds (process running for 8.805)
+2025-02-04T16:50:05.129+05:30  INFO 13900 --- [WardenService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WARDENSERVICE/LTIN565640.cts.com:WardenService:8087 - registration status: 204

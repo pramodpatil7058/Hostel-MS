@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/leave")
 public class LeaveController {
 
-    //? Inject the dependancy for Leave Service
+    //? Inject the dependency for Leave Service
     private LeaveService leaveService;
 
     public LeaveController(LeaveService leaveService) {

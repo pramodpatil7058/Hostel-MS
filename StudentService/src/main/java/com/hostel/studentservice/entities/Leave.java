@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Leave {
     private int leaveId;
+    private int studentId;
     private String reason;
     private String fromDate;
     private String toDate;

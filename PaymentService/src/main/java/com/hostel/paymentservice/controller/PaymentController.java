@@ -63,9 +63,6 @@ public class PaymentController {
     @PutMapping("/update")
     public ResponseEntity<Payment> updatePayment(@RequestBody Payment payment) {
         Payment updatedPayment = paymentService.updatePayment(payment);
-        if (updatedPayment == null) {
-            throw new ResourceNotFoundException("Payment Invalid");
-        }
         return ResponseEntity.ok(updatedPayment);
     }
 

@@ -27,9 +27,6 @@ public class WardenController {
     @GetMapping("/changeApplicationStatus")
     public Student changeApplicationStatus(@RequestParam("studentId") int studentId, @RequestParam("status") boolean status){
         Student student = wardenServices.changeApplicationStatus(studentId, status);
-        if(student == null){
-            throw new ResourceNotFoundException("Student ID Does not exist");
-        }
         return student;
     }
 

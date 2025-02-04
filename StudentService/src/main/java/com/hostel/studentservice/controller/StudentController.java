@@ -1,5 +1,6 @@
 package com.hostel.studentservice.controller;
 
+import com.hostel.studentservice.dto.StudentDTO;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
@@ -25,8 +26,8 @@ public class StudentController {
     
     //? Add a new student
     @PostMapping("/saveStudent")
-    public Student saveStudent(@Valid @RequestBody Student student) {
-        Student savedStudent =studentService.saveStudent(student);
+    public StudentDTO saveStudent(@Valid @RequestBody Student student) {
+        StudentDTO savedStudent =studentService.saveStudent(student);
         if(savedStudent == null){
             throw new CustomException("Something went wrong");
         }
@@ -37,8 +38,8 @@ public class StudentController {
 
     //? Get a student based on student id
     @GetMapping("/getStudentById/{id}")
-    public Student getStudentById(@PathVariable("id") int studentId){
-        Student student = studentService.getStudentById(studentId);
+    public StudentDTO getStudentById(@PathVariable("id") int studentId){
+        StudentDTO student = studentService.getStudentById(studentId);
         if(student == null){
             throw new NoResourceFoundException("Student ID does not exists.");
         }
@@ -57,8 +58,8 @@ public class StudentController {
 
     //? Update a student (Used by warden)
     @PutMapping("/updateStudent")
-    public Student updateStudent(@RequestBody Student student){
-        Student student1 =studentService.updateStudent(student);
+    public StudentDTO updateStudent(@RequestBody Student student){
+        StudentDTO student1 =studentService.updateStudent(student);
         if(student1 == null){
             throw new NoResourceFoundException("Student does not exists.");
         }
@@ -70,7 +71,7 @@ public class StudentController {
 
     //? Get all the students
     @GetMapping("/getAllStudents")
-    public List<Student> getAllStudents(){
+    public List<StudentDTO> getAllStudents(){
         return studentService.getAllStudents();
     }
 
@@ -126,7 +127,7 @@ public class StudentController {
 
     //? Update a payment to Payment Service
     @PutMapping("/payment")
-    public Payment updatePayment(Payment payment){
+    public Payment updatePayment(@RequestBody Payment payment){
         return studentService.updatePayment(payment);
     }
 }

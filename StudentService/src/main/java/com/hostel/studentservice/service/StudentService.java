@@ -1,5 +1,6 @@
 package com.hostel.studentservice.service;
 
+import com.hostel.studentservice.dto.StudentDTO;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
@@ -19,15 +20,15 @@ import java.util.List;
 
 @Service
 public interface StudentService {
-	Student saveStudent(Student student);
+	StudentDTO saveStudent(Student student);
 
-	Student getStudentById(int studentId);
+	StudentDTO getStudentById(int studentId);
 
-	List<Student> getAllStudents();
+	List<StudentDTO> getAllStudents();
 
 	boolean deleteStudent(int studentId);
 
-	Student updateStudent(Student student);
+	StudentDTO updateStudent(Student student);
 
 	Leave applyLeave(Leave leave);
 

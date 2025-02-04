@@ -1,0 +1,343 @@
+2025-02-04T09:09:32.959+05:30  INFO 21824 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Starting LeaveServiceApplication using Java 23.0.1 with PID 21824 (C:\Users\2380241\Hostel-Ms\LeaveService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\LeaveService)
+2025-02-04T09:09:32.962+05:30  INFO 21824 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T09:09:33.015+05:30  INFO 21824 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T09:09:33.015+05:30  INFO 21824 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=LeaveService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T09:09:33.832+05:30  INFO 21824 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T09:09:34.038+05:30  INFO 21824 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 192 ms. Found 1 JPA repository interface.
+2025-02-04T09:09:34.346+05:30  INFO 21824 --- [LeaveService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5909993-8a89-3066-9f79-0b719b432c4f
+2025-02-04T09:09:34.773+05:30  INFO 21824 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2025-02-04T09:09:34.790+05:30  INFO 21824 --- [LeaveService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T09:09:34.790+05:30  INFO 21824 --- [LeaveService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T09:09:34.902+05:30  INFO 21824 --- [LeaveService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T09:09:34.903+05:30  INFO 21824 --- [LeaveService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1886 ms
+2025-02-04T09:09:35.106+05:30  INFO 21824 --- [LeaveService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T09:09:35.281+05:30  INFO 21824 --- [LeaveService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-04T09:09:35.366+05:30  INFO 21824 --- [LeaveService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T09:09:35.923+05:30  INFO 21824 --- [LeaveService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T09:09:35.985+05:30  INFO 21824 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T09:09:36.560+05:30  INFO 21824 --- [LeaveService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22b3b5d0
+2025-02-04T09:09:36.564+05:30  INFO 21824 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T09:09:36.640+05:30  WARN 21824 --- [LeaveService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T09:09:36.669+05:30  INFO 21824 --- [LeaveService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T09:09:37.902+05:30  INFO 21824 --- [LeaveService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T09:09:37.975+05:30  INFO 21824 --- [LeaveService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T09:09:38.431+05:30  WARN 21824 --- [LeaveService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T09:09:39.209+05:30  INFO 21824 --- [LeaveService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T09:09:39.285+05:30  WARN 21824 --- [LeaveService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T09:09:39.362+05:30  INFO 21824 --- [LeaveService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T09:09:39.408+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T09:09:39.414+05:30  INFO 21824 --- [LeaveService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:09:39.430+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T09:09:39.431+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T09:09:39.431+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T09:09:39.431+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T09:09:39.431+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T09:09:39.432+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T09:09:39.432+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T09:09:39.788+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T09:09:39.791+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T09:09:39.794+05:30  INFO 21824 --- [LeaveService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T09:09:39.796+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738640379796 with initial instances count: 2
+2025-02-04T09:09:39.803+05:30  INFO 21824 --- [LeaveService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LEAVESERVICE with eureka with status UP
+2025-02-04T09:09:39.804+05:30  INFO 21824 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738640379804, current=UP, previous=STARTING]
+2025-02-04T09:09:39.807+05:30  INFO 21824 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088: registering service...
+2025-02-04T09:09:39.834+05:30  INFO 21824 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2025-02-04T09:09:39.836+05:30  INFO 21824 --- [LeaveService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2025-02-04T09:09:39.852+05:30  INFO 21824 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Started LeaveServiceApplication in 13.163 seconds (process running for 13.936)
+2025-02-04T09:09:39.865+05:30  INFO 21824 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088 - registration status: 204
+2025-02-04T09:10:46.690+05:30  INFO 21824 --- [LeaveService] [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-04T09:10:46.690+05:30  INFO 21824 --- [LeaveService] [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-04T09:10:46.697+05:30  INFO 21824 --- [LeaveService] [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-04T09:10:46.806+05:30  INFO 21824 --- [LeaveService] [http-nio-8088-exec-1] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 2
+2025-02-04T09:10:53.312+05:30  INFO 21824 --- [LeaveService] [http-nio-8088-exec-3] c.h.l.service.impl.LeaveServiceImpl      : Called get all leaves
+2025-02-04T09:14:39.441+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:19:39.458+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:24:39.473+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:29:39.487+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:34:39.489+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:39:39.503+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:44:39.517+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:49:39.529+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:54:39.532+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T09:59:39.543+05:30  INFO 21824 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:03:40.717+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T10:03:40.733+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LEAVESERVICE with eureka with status DOWN
+2025-02-04T10:03:40.734+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738643620734, current=DOWN, previous=UP]
+2025-02-04T10:03:40.735+05:30  INFO 21824 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088: registering service...
+2025-02-04T10:03:40.754+05:30  INFO 21824 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088 - registration status: 204
+2025-02-04T10:03:40.763+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T10:03:40.775+05:30  INFO 21824 --- [LeaveService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T10:03:40.791+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T10:03:40.804+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T10:03:40.818+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T10:03:40.819+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T10:03:43.827+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T10:03:43.828+05:30  WARN 21824 --- [LeaveService] [DiscoveryClient-%d] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2025-02-04T10:03:43.834+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088 - deregister  status: 200
+2025-02-04T10:03:43.834+05:30  INFO 21824 --- [LeaveService] [RMI TCP Connection(62)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T10:03:52.903+05:30  INFO 17476 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Starting LeaveServiceApplication using Java 23.0.1 with PID 17476 (C:\Users\2380241\Hostel-Ms\LeaveService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\LeaveService)
+2025-02-04T10:03:52.906+05:30  INFO 17476 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T10:03:52.955+05:30  INFO 17476 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T10:03:52.955+05:30  INFO 17476 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=LeaveService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T10:03:53.806+05:30  INFO 17476 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T10:03:53.982+05:30  INFO 17476 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 163 ms. Found 1 JPA repository interface.
+2025-02-04T10:03:54.308+05:30  INFO 17476 --- [LeaveService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5909993-8a89-3066-9f79-0b719b432c4f
+2025-02-04T10:03:54.695+05:30  INFO 17476 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8088 (http)
+2025-02-04T10:03:54.712+05:30  INFO 17476 --- [LeaveService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T10:03:54.712+05:30  INFO 17476 --- [LeaveService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T10:03:54.815+05:30  INFO 17476 --- [LeaveService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T10:03:54.816+05:30  INFO 17476 --- [LeaveService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1858 ms
+2025-02-04T10:03:54.968+05:30  INFO 17476 --- [LeaveService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T10:03:55.057+05:30  INFO 17476 --- [LeaveService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-04T10:03:55.104+05:30  INFO 17476 --- [LeaveService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T10:03:55.426+05:30  INFO 17476 --- [LeaveService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T10:03:55.469+05:30  INFO 17476 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T10:03:56.584+05:30  INFO 17476 --- [LeaveService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4bf89d3d
+2025-02-04T10:03:56.587+05:30  INFO 17476 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T10:03:56.695+05:30  WARN 17476 --- [LeaveService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T10:03:56.735+05:30  INFO 17476 --- [LeaveService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T10:03:58.113+05:30  INFO 17476 --- [LeaveService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T10:03:58.220+05:30  INFO 17476 --- [LeaveService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T10:03:58.601+05:30  WARN 17476 --- [LeaveService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T10:03:59.255+05:30  INFO 17476 --- [LeaveService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T10:03:59.349+05:30  WARN 17476 --- [LeaveService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T10:03:59.451+05:30  INFO 17476 --- [LeaveService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T10:03:59.500+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T10:03:59.522+05:30  INFO 17476 --- [LeaveService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:03:59.550+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T10:03:59.551+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T10:03:59.551+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T10:03:59.551+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T10:03:59.552+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T10:03:59.552+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T10:03:59.552+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T10:04:00.195+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T10:04:00.201+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T10:04:00.209+05:30  INFO 17476 --- [LeaveService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T10:04:00.213+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738643640212 with initial instances count: 6
+2025-02-04T10:04:00.222+05:30  INFO 17476 --- [LeaveService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LEAVESERVICE with eureka with status UP
+2025-02-04T10:04:00.223+05:30  INFO 17476 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738643640223, current=UP, previous=STARTING]
+2025-02-04T10:04:00.227+05:30  INFO 17476 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088: registering service...
+2025-02-04T10:04:00.271+05:30  INFO 17476 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8088 (http) with context path '/'
+2025-02-04T10:04:00.274+05:30  INFO 17476 --- [LeaveService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8088
+2025-02-04T10:04:00.297+05:30  INFO 17476 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Started LeaveServiceApplication in 9.317 seconds (process running for 10.044)
+2025-02-04T10:04:00.315+05:30  INFO 17476 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088 - registration status: 204
+2025-02-04T10:08:59.570+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:10:09.008+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-04T10:10:09.009+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-04T10:10:09.010+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-04T10:10:09.055+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-4] c.h.l.service.impl.LeaveServiceImpl      : Add Leave service executed
+2025-02-04T10:10:17.979+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-5] c.h.l.service.impl.LeaveServiceImpl      : Get leave by leave id 1
+2025-02-04T10:11:00.293+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-6] c.h.l.service.impl.LeaveServiceImpl      : Add Leave service executed
+2025-02-04T10:11:07.630+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-7] c.h.l.service.impl.LeaveServiceImpl      : Get leave by leave id 1
+2025-02-04T10:11:30.365+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-8] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 1
+2025-02-04T10:12:01.198+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-9] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 2
+2025-02-04T10:12:02.366+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-1] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 2
+2025-02-04T10:12:04.625+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-2] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 1
+2025-02-04T10:13:59.578+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T10:18:59.584+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:06:05.589+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h42m38s609ms192µs400ns).
+2025-02-04T12:06:08.171+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:11:08.179+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:29:38.471+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m32s710ms880µs700ns).
+2025-02-04T12:30:10.887+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:35:10.900+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:51:23.670+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m15s72ms164µs800ns).
+2025-02-04T12:53:20.129+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-10] c.h.l.service.impl.LeaveServiceImpl      : Get leave by leave id 1
+2025-02-04T12:53:26.604+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-4] c.h.l.service.impl.LeaveServiceImpl      : Get leave by leave id 0
+2025-02-04T12:53:55.961+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T12:54:21.403+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-5] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 1
+2025-02-04T12:54:24.699+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-6] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 2
+2025-02-04T12:54:53.859+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-7] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 0
+2025-02-04T12:55:31.500+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-8] c.h.l.service.impl.LeaveServiceImpl      : Add Leave service executed
+2025-02-04T12:58:55.967+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:03:55.975+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:08:55.982+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:13:56.008+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:18:56.011+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T13:23:04.139+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m40s85ms327µs700ns).
+2025-02-04T13:23:16.123+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-1] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 0
+2025-02-04T13:23:19.959+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-2] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 3
+2025-02-04T13:23:24.066+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-3] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 3
+2025-02-04T13:23:26.777+05:30  INFO 17476 --- [LeaveService] [http-nio-8088-exec-10] c.h.l.service.impl.LeaveServiceImpl      : Get all leaves by student id 2
+2025-02-04T14:12:09.387+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m35s233ms929µs600ns).
+2025-02-04T14:13:11.320+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:18:11.333+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:23:11.335+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:28:11.341+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:33:11.355+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:38:11.358+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:43:11.364+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:48:11.376+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:53:11.383+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T14:58:11.398+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:03:11.412+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:08:11.416+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:12:49.311+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m38s191ms457µs800ns).
+2025-02-04T15:14:33.982+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:19:33.988+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:24:33.995+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:29:34.007+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:34:34.019+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T15:39:34.023+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:12:08.240+05:30  WARN 17476 --- [LeaveService] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m48s510ms459µs100ns).
+2025-02-04T16:12:52.521+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:17:52.521+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:22:52.537+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:27:52.552+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:32:52.568+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:37:52.576+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:37:58.872+05:30  INFO 24756 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Starting LeaveServiceApplication using Java 23.0.1 with PID 24756 (C:\Users\2380241\Hostel-Ms\LeaveService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\LeaveService)
+2025-02-04T16:37:58.874+05:30  INFO 24756 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T16:37:58.929+05:30  INFO 24756 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T16:37:58.930+05:30  INFO 24756 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=LeaveService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T16:37:59.590+05:30  INFO 24756 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T16:37:59.771+05:30  INFO 24756 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171 ms. Found 1 JPA repository interface.
+2025-02-04T16:37:59.992+05:30  INFO 24756 --- [LeaveService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5909993-8a89-3066-9f79-0b719b432c4f
+2025-02-04T16:38:00.308+05:30  INFO 24756 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8098 (http)
+2025-02-04T16:38:00.319+05:30  INFO 24756 --- [LeaveService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T16:38:00.320+05:30  INFO 24756 --- [LeaveService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T16:38:00.389+05:30  INFO 24756 --- [LeaveService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T16:38:00.389+05:30  INFO 24756 --- [LeaveService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1456 ms
+2025-02-04T16:38:00.536+05:30  INFO 24756 --- [LeaveService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T16:38:00.614+05:30  INFO 24756 --- [LeaveService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-04T16:38:00.656+05:30  INFO 24756 --- [LeaveService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T16:38:00.944+05:30  INFO 24756 --- [LeaveService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T16:38:00.988+05:30  INFO 24756 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T16:38:01.274+05:30  INFO 24756 --- [LeaveService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65a2e14e
+2025-02-04T16:38:01.276+05:30  INFO 24756 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T16:38:01.328+05:30  WARN 24756 --- [LeaveService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T16:38:01.348+05:30  INFO 24756 --- [LeaveService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T16:38:02.212+05:30  INFO 24756 --- [LeaveService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T16:38:02.269+05:30  INFO 24756 --- [LeaveService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:38:02.643+05:30  WARN 24756 --- [LeaveService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T16:38:03.076+05:30  INFO 24756 --- [LeaveService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T16:38:03.113+05:30  WARN 24756 --- [LeaveService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T16:38:03.167+05:30  INFO 24756 --- [LeaveService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T16:38:03.194+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T16:38:03.198+05:30  INFO 24756 --- [LeaveService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:38:03.206+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T16:38:03.207+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T16:38:03.207+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T16:38:03.207+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T16:38:03.207+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T16:38:03.207+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T16:38:03.207+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T16:38:03.448+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T16:38:03.452+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T16:38:03.455+05:30  INFO 24756 --- [LeaveService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T16:38:03.456+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738667283456 with initial instances count: 9
+2025-02-04T16:38:03.460+05:30  INFO 24756 --- [LeaveService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LEAVESERVICE with eureka with status UP
+2025-02-04T16:38:03.461+05:30  INFO 24756 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667283461, current=UP, previous=STARTING]
+2025-02-04T16:38:03.464+05:30  INFO 24756 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098: registering service...
+2025-02-04T16:38:03.487+05:30  INFO 24756 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8098 (http) with context path '/'
+2025-02-04T16:38:03.488+05:30  INFO 24756 --- [LeaveService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8098
+2025-02-04T16:38:03.503+05:30  INFO 24756 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Started LeaveServiceApplication in 6.617 seconds (process running for 7.352)
+2025-02-04T16:38:03.514+05:30  INFO 24756 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098 - registration status: 204
+2025-02-04T16:42:52.579+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:43:03.216+05:30  INFO 24756 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:47:52.589+05:30  INFO 17476 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:48:03.219+05:30  INFO 24756 --- [LeaveService] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:49:39.615+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T16:49:39.618+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LEAVESERVICE with eureka with status DOWN
+2025-02-04T16:49:39.619+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667979619, current=DOWN, previous=UP]
+2025-02-04T16:49:39.619+05:30  INFO 24756 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098: registering service...
+2025-02-04T16:49:39.626+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T16:49:39.637+05:30  INFO 24756 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098 - registration status: 204
+2025-02-04T16:49:39.644+05:30  INFO 24756 --- [LeaveService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T16:49:39.649+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-02-04T16:49:39.652+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:49:39.657+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T16:49:39.659+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LEAVESERVICE with eureka with status DOWN
+2025-02-04T16:49:39.659+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667979659, current=DOWN, previous=UP]
+2025-02-04T16:49:39.660+05:30  INFO 17476 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088: registering service...
+2025-02-04T16:49:39.678+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T16:49:39.688+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T16:49:39.689+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T16:49:39.700+05:30  INFO 17476 --- [LeaveService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T16:49:39.700+05:30  INFO 17476 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088 - registration status: 204
+2025-02-04T16:49:39.715+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:49:39.721+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T16:49:39.729+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-04T16:49:39.731+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-02-04T16:49:42.705+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T16:49:42.724+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098 - deregister  status: 200
+2025-02-04T16:49:42.725+05:30  INFO 24756 --- [LeaveService] [RMI TCP Connection(17)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T16:49:42.737+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-02-04T16:49:42.753+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8088 - deregister  status: 200
+2025-02-04T16:49:42.754+05:30  INFO 17476 --- [LeaveService] [RMI TCP Connection(219)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-02-04T16:49:54.771+05:30  INFO 14452 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Starting LeaveServiceApplication using Java 23.0.1 with PID 14452 (C:\Users\2380241\Hostel-Ms\LeaveService\target\classes started by 2380241 in C:\Users\2380241\Hostel-Ms\LeaveService)
+2025-02-04T16:49:54.772+05:30  INFO 14452 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T16:49:54.827+05:30  INFO 14452 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8083
+2025-02-04T16:49:54.827+05:30  INFO 14452 --- [LeaveService] [main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=LeaveService, profiles=[default], label=null, version=751c73761d2b63d3640b825d9498052422140c1d, state=
+2025-02-04T16:49:55.554+05:30  INFO 14452 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T16:49:55.688+05:30  INFO 14452 --- [LeaveService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interface.
+2025-02-04T16:49:56.078+05:30  INFO 14452 --- [LeaveService] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c5909993-8a89-3066-9f79-0b719b432c4f
+2025-02-04T16:49:56.527+05:30  INFO 14452 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8098 (http)
+2025-02-04T16:49:56.573+05:30  INFO 14452 --- [LeaveService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T16:49:56.573+05:30  INFO 14452 --- [LeaveService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T16:49:56.636+05:30  INFO 14452 --- [LeaveService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T16:49:56.637+05:30  INFO 14452 --- [LeaveService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1808 ms
+2025-02-04T16:49:56.830+05:30  INFO 14452 --- [LeaveService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T16:49:56.894+05:30  INFO 14452 --- [LeaveService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-04T16:49:56.930+05:30  INFO 14452 --- [LeaveService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T16:49:57.225+05:30  INFO 14452 --- [LeaveService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T16:49:57.270+05:30  INFO 14452 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T16:49:57.612+05:30  INFO 14452 --- [LeaveService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3d3a28b5
+2025-02-04T16:49:57.618+05:30  INFO 14452 --- [LeaveService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T16:49:57.670+05:30  WARN 14452 --- [LeaveService] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-02-04T16:49:57.688+05:30  INFO 14452 --- [LeaveService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.40
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T16:49:58.487+05:30  INFO 14452 --- [LeaveService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T16:49:58.550+05:30  INFO 14452 --- [LeaveService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T16:49:58.872+05:30  WARN 14452 --- [LeaveService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T16:49:59.461+05:30  INFO 14452 --- [LeaveService] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-02-04T16:49:59.496+05:30  WARN 14452 --- [LeaveService] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-02-04T16:49:59.552+05:30  INFO 14452 --- [LeaveService] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-02-04T16:49:59.587+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-02-04T16:49:59.595+05:30  INFO 14452 --- [LeaveService] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-02-04T16:49:59.604+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-02-04T16:49:59.604+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-02-04T16:49:59.604+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-02-04T16:49:59.605+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-02-04T16:49:59.606+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-02-04T16:49:59.606+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-02-04T16:49:59.606+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-02-04T16:49:59.879+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-02-04T16:49:59.883+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-02-04T16:49:59.886+05:30  INFO 14452 --- [LeaveService] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-02-04T16:49:59.889+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1738667999889 with initial instances count: 10
+2025-02-04T16:49:59.894+05:30  INFO 14452 --- [LeaveService] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LEAVESERVICE with eureka with status UP
+2025-02-04T16:49:59.895+05:30  INFO 14452 --- [LeaveService] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1738667999895, current=UP, previous=STARTING]
+2025-02-04T16:49:59.899+05:30  INFO 14452 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098: registering service...
+2025-02-04T16:49:59.940+05:30  INFO 14452 --- [LeaveService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8098 (http) with context path '/'
+2025-02-04T16:49:59.945+05:30  INFO 14452 --- [LeaveService] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8098
+2025-02-04T16:49:59.962+05:30  INFO 14452 --- [LeaveService] [main] c.h.l.LeaveServiceApplication            : Started LeaveServiceApplication in 7.284 seconds (process running for 8.078)
+2025-02-04T16:49:59.986+05:30  INFO 14452 --- [LeaveService] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LEAVESERVICE/LTIN565640.cts.com:LeaveService:8098 - registration status: 204
