@@ -19,5 +19,4 @@ public class StudentDTO {
 	    private String email;
 	    private String about;
 	    private Boolean status;
-	    private List<Payment> payments;
 }

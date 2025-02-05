@@ -37,6 +37,4 @@ public class Student {
     private Boolean status;
     @Column(name = "password")
     private String password;
-    @Transient
-    public List<Payment> payments = new ArrayList<>();
 }

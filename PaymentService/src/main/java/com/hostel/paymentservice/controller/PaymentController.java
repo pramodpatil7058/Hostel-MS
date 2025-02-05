@@ -1,7 +1,6 @@
 package com.hostel.paymentservice.controller;
 
 import com.hostel.paymentservice.entity.Payment;
-import com.hostel.paymentservice.exception.ResourceNotFoundException;
 import com.hostel.paymentservice.service.PaymentService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

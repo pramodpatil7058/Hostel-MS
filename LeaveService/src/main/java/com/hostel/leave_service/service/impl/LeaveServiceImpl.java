@@ -10,11 +10,16 @@ import com.hostel.leave_service.service.LeaveService;
 
 import java.util.List;
 
+/**
+ * @implNote LeaveServiceImpl implements LeaveService which acts as a service layer for Leave service
+ * @version 1.0.0
+ *
+ */
+
 @Service
 public class LeaveServiceImpl implements LeaveService {
 
 
-    //? Inject the dependancy for LeaveRepository
     private LeaveRepository leaveRepository;
     
 

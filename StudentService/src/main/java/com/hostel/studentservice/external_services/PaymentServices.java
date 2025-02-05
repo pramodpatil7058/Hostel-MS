@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @FeignClient(name = "PAYMENTSERVICE")
 public interface PaymentServices {
     @GetMapping("/payment/getAllPaymentsByStudentId/{studentId}")
-    ArrayList<Payment> getPayments(@PathVariable("studentId") int studentId);
+    ArrayList<Payment> getPayments(@PathVariable int studentId);
 
     @GetMapping("/payment/get/{payId}")
     Payment getPaymentByPayId(@PathVariable int payId);

@@ -3,7 +3,6 @@ package com.hostel.wardenservice.controller;
 import com.hostel.wardenservice.entity.Leave;
 import com.hostel.wardenservice.entity.Payment;
 import com.hostel.wardenservice.entity.Student;
-import com.hostel.wardenservice.exception.ResourceNotFoundException;
 import com.hostel.wardenservice.service.WardenServices;
 
 import org.springframework.http.ResponseEntity;
@@ -25,9 +24,8 @@ public class WardenController {
 
 
     @GetMapping("/changeApplicationStatus")
-    public Student changeApplicationStatus(@RequestParam("studentId") int studentId, @RequestParam("status") boolean status){
-        Student student = wardenServices.changeApplicationStatus(studentId, status);
-        return student;
+    public Student changeApplicationStatus(@RequestParam int studentId, @RequestParam boolean status){
+        return wardenServices.changeApplicationStatus(studentId, status);
     }
 
     @GetMapping("/getAllStudents")

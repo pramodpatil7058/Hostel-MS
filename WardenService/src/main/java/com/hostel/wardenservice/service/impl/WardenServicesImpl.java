@@ -3,7 +3,6 @@ package com.hostel.wardenservice.service.impl;
 import com.hostel.wardenservice.entity.Leave;
 import com.hostel.wardenservice.entity.Payment;
 import com.hostel.wardenservice.entity.Student;
-import com.hostel.wardenservice.exception.IncompleteTransactionException;
 import com.hostel.wardenservice.exception.ResourceNotFoundException;
 import com.hostel.wardenservice.external_services.LeaveServices;
 import com.hostel.wardenservice.external_services.PaymentServices;
@@ -40,12 +39,6 @@ public class WardenServicesImpl implements WardenServices {
             Student student = studentServices.getStudent(studentId);
             if(student == null) {
             	throw new ResourceNotFoundException("Student does not exists.");
-            }
-            
-            List<Payment> payments = paymentServices.getAllPendingPayments(studentId);
-            
-            if(payments.isEmpty()) {
-            	throw new IncompleteTransactionException("No payments are done by this student");
             }
             
             student.setStatus(status);

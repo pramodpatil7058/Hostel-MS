@@ -1,8 +1,6 @@
 package com.hostel.paymentservice.service.impl;
 
 import com.hostel.paymentservice.entity.Payment;
-import com.hostel.paymentservice.exception.ResourceAlreadyExistsException;
-import com.hostel.paymentservice.exception.ResourceNotFoundException;
 import com.hostel.paymentservice.repository.PaymentRepository;
 import com.hostel.paymentservice.service.PaymentService;
 
@@ -70,7 +68,6 @@ public class PaymentServiceImpl implements PaymentService {
     @Override
     public Payment getPayment(int payId) {
     	logger.info("Get payment with payment id {}",payId);
-    	Payment payment = paymentRepository.findById(payId).orElse(null);
-        return payment;
+    	return paymentRepository.findById(payId).orElse(null);
     }
 }
