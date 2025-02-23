@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Leave {
-    private int leaveId;
-    private String reason;
-    private String fromDate;
-    private String toDate;
-    private Boolean status;
+	private int leaveId;
+	private String reason;
+	private String fromDate;
+	private String toDate;
+	private Boolean status;
 }

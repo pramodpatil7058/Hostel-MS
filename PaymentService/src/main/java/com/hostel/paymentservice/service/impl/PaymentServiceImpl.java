@@ -23,6 +23,12 @@ public class PaymentServiceImpl implements PaymentService {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     
     //? Logic to add a payment
+    /**
+     * Saves an object by taking a parameter as Object of .
+     *
+     * @param int leaveId
+     * @return status as true or false.
+     */
     @Override
     public Payment addPayment(Payment payment) {
     	logger.info("Added payment");
@@ -30,6 +36,12 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     //? Logic to get all payments (used by warden)
+    /**
+     * Deletes a already saved Leave object based on leaveId.
+     *
+     * @param int leaveId
+     * @return status as true or false.
+     */
     @Override
     public List<Payment> getAllPayments() {
     	logger.info("Get all payments");
@@ -37,6 +49,12 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     //? Logic to update a payment
+    /**
+     * Deletes a already saved Leave object based on leaveId.
+     *
+     * @param int leaveId
+     * @return status as true or false.
+     */
     @Override
     public Payment updatePayment(Payment payment) {
     	logger.info("Updated payment with payment Id {}",payment.getPayId());
@@ -56,6 +74,12 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     //? Logic to get All payments by a student
+    /**
+     * Deletes a already saved Leave object based on leaveId.
+     *
+     * @param int leaveId
+     * @return status as true or false.
+     */
     @Override
     public List<Payment> getAllPaymentsByStudentId(int studentId) {
     	logger.info("Get all payments for student id {}",studentId);
@@ -65,6 +89,12 @@ public class PaymentServiceImpl implements PaymentService {
     }
 
     //? Logic to get a payment based on paymentID
+    /**
+     * Deletes a already saved Leave object based on leaveId.
+     *
+     * @param int leaveId
+     * @return status as true or false.
+     */
     @Override
     public Payment getPayment(int payId) {
     	logger.info("Get payment with payment id {}",payId);

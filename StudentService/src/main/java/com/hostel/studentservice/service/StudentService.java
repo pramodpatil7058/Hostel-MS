@@ -45,4 +45,8 @@ public interface StudentService {
 	List<Payment> getPayments(int studentId);
 
 	List<Leave> getLeavesByStudentId(int studentId);
+
+	List<Payment> getPendingPayments(int studentId);
+
+    StudentDTO login(Student student);
 }

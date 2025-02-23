@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class WardenCredentials {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "warden_id")
-    private int wardenId;
-    @Column(name = "warden_name")
-    private String wardenName;
-    @Column(name = "warden_password")
-    private String wardenPassword;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "warden_id")
+	private int wardenId;
+	@Column(name = "warden_name")
+	private String wardenName;
+	@Column(name = "warden_password")
+	private String wardenPassword;
 }

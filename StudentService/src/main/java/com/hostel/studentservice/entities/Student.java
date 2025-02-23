@@ -17,6 +17,7 @@ import org.hibernate.validator.constraints.Length;
 @AllArgsConstructor
 @Table(name="students")
 @Data
+
 public class Student {
 
     @Id
@@ -37,4 +38,7 @@ public class Student {
     private Boolean status;
     @Column(name = "password")
     private String password;
+    @Column(name="role")
+    private String role;
+	
 }

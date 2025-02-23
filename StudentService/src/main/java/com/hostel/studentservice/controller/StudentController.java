@@ -4,8 +4,6 @@ import com.hostel.studentservice.dto.StudentDTO;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
-import com.hostel.studentservice.exception.CustomException;
-import com.hostel.studentservice.exception.NoResourceFoundException;
 import com.hostel.studentservice.service.StudentService;
 import jakarta.validation.Valid;
 
@@ -15,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
+@CrossOrigin
 public class StudentController {
 
     //? Inject the dependency for StudentService
@@ -27,65 +26,54 @@ public class StudentController {
     //? Add a new student
     @PostMapping("/saveStudent")
     public StudentDTO saveStudent(@Valid @RequestBody Student student) {
-        StudentDTO savedStudent =studentService.saveStudent(student);
-        if(savedStudent == null){
-            throw new CustomException("Something went wrong");
-        }
-        return savedStudent;
+        return studentService.saveStudent(student);
     }
 
-//? Needed for both student and warden service
+    //? Needed for both student and warden service
 
     //? Get a student based on student id
     @GetMapping("/getStudentById/{id}")
     public StudentDTO getStudentById(@PathVariable("id") int studentId){
-        StudentDTO student = studentService.getStudentById(studentId);
-        if(student == null){
-            throw new NoResourceFoundException("Student ID does not exists.");
-        }
-        return student;
+        return studentService.getStudentById(studentId);
     }
 
     //? Delete a student
     @DeleteMapping("/deleteStudent/{id}")
     public boolean deleteStudent(@PathVariable("id") int studentId){
-
-        if(!studentService.deleteStudent(studentId)){
-            throw new NoResourceFoundException("Student ID does not exists.");
-        }
-        return true;
+        StudentDTO student = studentService.getStudentById(studentId);
+        
+        return studentService.deleteStudent(studentId);
     }
 
-    //? Update a student (Used by warden)
-    @PutMapping("/updateStudent")
-    public StudentDTO updateStudent(@RequestBody Student student){
-        StudentDTO student1 =studentService.updateStudent(student);
-        if(student1 == null){
-            throw new NoResourceFoundException("Student does not exists.");
-        }
-        return student1;
 
-    }
 
 //? Needed for warden service
+
+    //? Login
+    @PostMapping("/login")
+    public StudentDTO login(@RequestBody Student student){
+
+        return studentService.login(student);
+    }
+
 
     //? Get all the students
     @GetMapping("/getAllStudents")
     public List<StudentDTO> getAllStudents(){
         return studentService.getAllStudents();
     }
-
+    //? Update a student (Used by warden)
+    @PutMapping("/updateStudent")
+    public StudentDTO updateStudent(@RequestBody Student student){
+        return studentService.updateStudent(student);
+    }
 
 //    ? Dealing with leaveService
 
     //? Add a leave to Leave Service
     @PostMapping("/leave")
     public Leave applyLeave(@RequestBody Leave leave){
-        Leave appliedLeave = studentService.applyLeave(leave);
-        if(appliedLeave == null){
-            throw new CustomException("Something went wrong");
-        }
-        return appliedLeave;
+        return studentService.applyLeave(leave);
     }
 
     //? Get a leave by leave Id from Leave Service
@@ -118,11 +106,15 @@ public class StudentController {
     public List<Payment> allPaymentsByStudentId(@PathVariable int studentId){
         return studentService.getPayments(studentId);
     }
+    @GetMapping("/allPendingPayments/{studentId}")
+    public List<Payment> allPendingPaymentsByStudentId(@PathVariable int studentId){
+        return studentService.getPendingPayments(studentId);
+    }
 
     //? Get a single payment from Payment Service
     @GetMapping("/payment/{payId}")
     public Payment getPayment(@PathVariable int payId){
-        return studentService.getPayment(payId);
+        return  studentService.getPayment(payId);
     }
 
     //? Update a payment to Payment Service

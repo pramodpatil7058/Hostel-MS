@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public interface WardenServices {
     Student changeApplicationStatus(int studentId, boolean status);
-    List<Student> getAllStudents();
+    List<Student> getAllStudents(int size, int limit);
     Payment addPayment(Payment payment);
     String removeStudent(int studentId);
     List<Payment> getAllPendingPayments(int studentId);

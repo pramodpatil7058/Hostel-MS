@@ -10,6 +10,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/payment")
+@CrossOrigin
+
 public class PaymentController {
 
     //? Inject the dependency for Payment Service

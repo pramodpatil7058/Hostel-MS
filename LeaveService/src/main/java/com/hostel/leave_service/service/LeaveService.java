@@ -39,6 +39,7 @@ public interface LeaveService {
      * @return status as true or false.
      */
     String deleteLeave(int leaveId);
+    
     /**
      * Returns a already saved Leave object based on leaveId.
      *

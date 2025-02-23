@@ -13,7 +13,8 @@ public class StudentMapper {
 				student.getStudentName(),
 				student.getEmail(),
 				student.getAbout(),
-				student.getStatus()
+				student.getStatus(),
+				student.getRole()
 		);
 	}
 }

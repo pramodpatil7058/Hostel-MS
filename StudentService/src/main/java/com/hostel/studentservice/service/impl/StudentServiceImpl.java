@@ -5,17 +5,16 @@ import com.hostel.studentservice.dto.StudentDTO;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
-import com.hostel.studentservice.exception.NoResourceFoundException;
+import com.hostel.studentservice.exception.ResourceNotFoundException;
 import com.hostel.studentservice.external_services.LeaveServices;
 import com.hostel.studentservice.external_services.PaymentServices;
 import com.hostel.studentservice.repository.StudentRepository;
 import com.hostel.studentservice.service.StudentService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -54,6 +53,7 @@ public class StudentServiceImpl implements StudentService {
     public StudentDTO saveStudent(Student student) {
     	student.setPassword(passwordEncoder.encode(student.getPassword()));
     	Student savedStudent = studentRepository.save(student);
+
     	return StudentMapper.mapToStudentDTO(savedStudent);
     }
 
@@ -61,8 +61,9 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public StudentDTO getStudentById(int studentId) {
         Student student = studentRepository.findById(studentId).orElse(null);
-        if(student == null){
-            throw new NoResourceFoundException("Student Id Does not exist");
+        System.out.println(student);
+        if(student == null) {
+        	throw new ResourceNotFoundException("Student Id does not exist");
         }
         return StudentMapper.mapToStudentDTO(student);
     }
@@ -77,16 +78,13 @@ public class StudentServiceImpl implements StudentService {
     //? Logic for deleting a student
     @Override
     public boolean deleteStudent(int studentId) {
-        boolean flag = false;
         Student student = studentRepository.findById(studentId).orElse(null);
         //! Check if student is not found
-        if(student == null){
-            throw new NoResourceFoundException("Student does not exist");
+        if(student == null) {
+        	throw new ResourceNotFoundException("Student ID does not exist.");
         }
-            studentRepository.deleteById(studentId);
-            flag = true;
-
-        return flag;
+        studentRepository.deleteById(studentId);
+        return true;
     }
 
     //? Logic for updating a student
@@ -94,7 +92,7 @@ public class StudentServiceImpl implements StudentService {
     public StudentDTO updateStudent(Student student) {
         Student student1 = studentRepository.findById(student.getStudentId()).orElse(null);
         if(student1 == null) {
-            return null;
+        	throw new ResourceNotFoundException("Student ID does not exist.");
         }
         if(student.getPassword()==null) {
         	student.setPassword(student1.getPassword());
@@ -108,17 +106,26 @@ public class StudentServiceImpl implements StudentService {
     //? Logic for applying leave from studentservice to LeaveService
     @Override
     public Leave applyLeave(Leave leave) {
-        return leaveServices.applyLeave(leave);
+    	Student student = studentRepository.findById(leave.getStudentId()).orElse(null);
+    	if(student == null) {
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+    	Leave updated = leaveServices.applyLeave(leave);
+    	if(updated == null) {
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+        return updated;
     }
 
     //? Logic for getting leave from studentservice to LeaveService
     @Override
-    public Leave getLeave(int leaveId) {
+    public Leave getLeave(int leaveId)  {
     	Leave leave = leaveServices.getLeave(leaveId);
     	if(leave == null) {
-    		throw new NoResourceFoundException("Leave not found");
-    	}
-        return leave;
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+
+    	return leave;
     }
 
     //? Logic for deleting leave from studentservice to LeaveService
@@ -126,27 +133,27 @@ public class StudentServiceImpl implements StudentService {
     public String deleteLeave(int leaveId) {
     	String res = leaveServices.deleteLeave(leaveId);
     	if(res == null) {
-    		throw new NoResourceFoundException("Leave id does not exist");
-    	}
-        return res;
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+    	return res;
     }
 
     //? Logic for updating leave from studentservice to LeaveService
     @Override
     public Leave updateLeave(Leave leave) {
-    	try {
-        return leaveServices.updateLeave(leave);
-    	}catch(RuntimeException e) {
-    		throw new NoResourceFoundException(e.getMessage());
-    	}
+    	Leave updated = leaveServices.updateLeave(leave);
+    	if(updated == null) {
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+        return updated;
     }
     
 	@Override
 	public List<Leave> getLeavesByStudentId(int studentId) {
 		Student student = studentRepository.findById(studentId).orElse(null);
 		if(student == null) {
-			throw new NoResourceFoundException("Student Id does not exist");
-		}
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
 		return leaveServices.getLeavesByStudentId(studentId);
 	}
     //?Payment Services
@@ -155,31 +162,51 @@ public class StudentServiceImpl implements StudentService {
     //?Logic to get payment from paymentService to StudentService
     @Override
     public Payment getPayment(int payId) {
-    	Payment payment= paymentServices.getPaymentByPayId(payId);
+    	Payment payment = paymentServices.getPaymentByPayId(payId);
     	if(payment == null) {
-    		throw new NoResourceFoundException("Payment id does not exist");
-    	}
-        return payment;
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+    	return payment;
+    	
     }
 
     //? Logic for updating Payment from studentService to paymentService
     @Override
     public Payment updatePayment(Payment payment) {
-    	Payment updated =  paymentServices.updatePayment(payment);
+    	Payment updated = paymentServices.updatePayment(payment);
     	if(updated == null) {
-    		throw new NoResourceFoundException("Something went wrong please try again later");
-    	}
-        return updated;
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+    	return updated;
     }
 
 	@Override
 	public List<Payment> getPayments(int studentId) {
 		Student student = studentRepository.findById(studentId).orElse(null);
 		if(student == null) {
-			throw new NoResourceFoundException("Student Id does not exist");
-		}
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
 		return paymentServices.getPayments(studentId);
 	}
+
+
+	@Override
+	public List<Payment> getPendingPayments(int studentId) {
+		Student student = studentRepository.findById(studentId).orElse(null);
+		if(student == null) {
+        	throw new ResourceNotFoundException("Student ID does not exist.");
+        }
+		return paymentServices.getAllPendingPaymentsByStudentId(studentId);
+	}
+
+    @Override
+    public StudentDTO login(Student student) {
+        Student savedStudent = studentRepository.findStudentByEmail(student.getEmail());
+        if(savedStudent == null ||savedStudent.getStudentName() == null){
+            throw new ResourceNotFoundException("Student Does not exist");
+        }
+        return StudentMapper.mapToStudentDTO(savedStudent);
+    }
 
 
 }

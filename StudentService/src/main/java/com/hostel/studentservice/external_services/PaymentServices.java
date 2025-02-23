@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @FeignClient(name = "PAYMENTSERVICE")
 public interface PaymentServices {
@@ -18,4 +19,7 @@ public interface PaymentServices {
 
     @PutMapping("/payment/update")
     Payment updatePayment(Payment payment);
+
+    @GetMapping("payments/getAllPendingPayments/{studentId}")
+	List<Payment> getAllPendingPaymentsByStudentId(@PathVariable int studentId);
 }

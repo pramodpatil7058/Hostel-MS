@@ -13,7 +13,7 @@ public class AspectAfterLogger {
 
     private final Logger logger = LoggerFactory.getLogger(AspectAfterLogger.class);
 
-    @After("* execution(com.hostel.paymentservice.**(..))")
+    @After("* execution(com.hostel.paymentservice.*.*(..))")
     public void logAfterAllPaymentController(JoinPoint joinPoint) {
         logger.info("After {}", joinPoint.getSignature().getName());
     }
