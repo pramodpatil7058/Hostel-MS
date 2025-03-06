@@ -24,4 +24,10 @@ public interface LeaveServices {
 
     @GetMapping("/leave/getLeavesByStudentId/{studentId}")
 	List<Leave> getLeavesByStudentId(@PathVariable int studentId);
+
+    @GetMapping("/leave")
+	List<Leave> getAllLeaves();
+    
+    @DeleteMapping("/leave/deleteAllByUserId/{userId}")
+    public String deleteAllByUserId(@PathVariable int userId);
 }

@@ -1,10 +1,9 @@
 package com.hostel.studentservice.service.impl;
 
-import com.hostel.studentservice.mapper.StudentMapper;
-import com.hostel.studentservice.dto.StudentDTO;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
+import com.hostel.studentservice.exception.PaymentException;
 import com.hostel.studentservice.exception.ResourceNotFoundException;
 import com.hostel.studentservice.external_services.LeaveServices;
 import com.hostel.studentservice.external_services.PaymentServices;
@@ -12,7 +11,6 @@ import com.hostel.studentservice.repository.StudentRepository;
 import com.hostel.studentservice.service.StudentService;
 
 
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -37,42 +35,38 @@ public class StudentServiceImpl implements StudentService {
 
     //? Inject a dependency for External LeaveService
     private LeaveServices leaveServices;
-    
-    private PasswordEncoder passwordEncoder;
-    
-    public StudentServiceImpl(StudentRepository studentRepository, PaymentServices paymentServices, LeaveServices leaveServices, PasswordEncoder passwordEncoder) {
+       
+    public StudentServiceImpl(StudentRepository studentRepository, PaymentServices paymentServices, LeaveServices leaveServices) {
     	this.paymentServices = paymentServices;
     	this.leaveServices = leaveServices;
     	this.studentRepository = studentRepository;
-    	this.passwordEncoder = passwordEncoder;
     }
     
 
     //? Logic for Saving a student
     @Override
-    public StudentDTO saveStudent(Student student) {
-    	student.setPassword(passwordEncoder.encode(student.getPassword()));
-    	Student savedStudent = studentRepository.save(student);
-
-    	return StudentMapper.mapToStudentDTO(savedStudent);
+    public Student saveStudent(Student student) {
+    	System.out.println("Save Student");
+    	return studentRepository.save(student);
     }
 
     //? Logic for getting a student based on studentId
     @Override
-    public StudentDTO getStudentById(int studentId) {
-        Student student = studentRepository.findById(studentId).orElse(null);
-        System.out.println(student);
-        if(student == null) {
-        	throw new ResourceNotFoundException("Student Id does not exist");
-        }
-        return StudentMapper.mapToStudentDTO(student);
+    public Student getStudent(int id) {
+    	System.out.println("Get Student");
+    	Student st = studentRepository.findById(id).orElse(null);
+    	System.out.println(st);
+    	if(st == null) {
+    		throw new ResourceNotFoundException("Student Id does not exist.");
+    	}
+    	return st;
     }
 
     //? Logic to get All students
     @Override
-    public List<StudentDTO> getAllStudents() {
-    	List<Student> students =studentRepository.findAll();
-    	return students.stream().map(StudentMapper::mapToStudentDTO).toList();
+    public List<Student> getAllStudents() {
+    	return studentRepository.findAll();
+    	
     }
 
     //? Logic for deleting a student
@@ -83,23 +77,22 @@ public class StudentServiceImpl implements StudentService {
         if(student == null) {
         	throw new ResourceNotFoundException("Student ID does not exist.");
         }
-        studentRepository.deleteById(studentId);
+        if(leaveServices.deleteAllByUserId(student.getStudentId()).equalsIgnoreCase("Success")) {
+        	studentRepository.deleteById(studentId);
+        };
         return true;
     }
 
     //? Logic for updating a student
     @Override
-    public StudentDTO updateStudent(Student student) {
+    public Student updateStudent(Student student) {
+    	System.out.println("Update Student");
         Student student1 = studentRepository.findById(student.getStudentId()).orElse(null);
         if(student1 == null) {
         	throw new ResourceNotFoundException("Student ID does not exist.");
         }
-        if(student.getPassword()==null) {
-        	student.setPassword(student1.getPassword());
-        }
         student1 = student;
-        Student updatedStudent = studentRepository.save(student1);
-        return StudentMapper.mapToStudentDTO(updatedStudent);
+        return studentRepository.save(student1);
     }
 
 
@@ -164,7 +157,7 @@ public class StudentServiceImpl implements StudentService {
     public Payment getPayment(int payId) {
     	Payment payment = paymentServices.getPaymentByPayId(payId);
     	if(payment == null) {
-        	throw new ResourceNotFoundException("Student ID does not exist.");
+        	throw new PaymentException("Invalid Payment");
         }
     	return payment;
     	
@@ -175,7 +168,7 @@ public class StudentServiceImpl implements StudentService {
     public Payment updatePayment(Payment payment) {
     	Payment updated = paymentServices.updatePayment(payment);
     	if(updated == null) {
-        	throw new ResourceNotFoundException("Student ID does not exist.");
+        	throw new PaymentException("Payment Invalid");
         }
     	return updated;
     }
@@ -184,7 +177,7 @@ public class StudentServiceImpl implements StudentService {
 	public List<Payment> getPayments(int studentId) {
 		Student student = studentRepository.findById(studentId).orElse(null);
 		if(student == null) {
-        	throw new ResourceNotFoundException("Student ID does not exist.");
+        	throw new PaymentException("Invalid Payment");
         }
 		return paymentServices.getPayments(studentId);
 	}
@@ -194,19 +187,18 @@ public class StudentServiceImpl implements StudentService {
 	public List<Payment> getPendingPayments(int studentId) {
 		Student student = studentRepository.findById(studentId).orElse(null);
 		if(student == null) {
-        	throw new ResourceNotFoundException("Student ID does not exist.");
+        	throw new PaymentException("Invalid Request");
         }
 		return paymentServices.getAllPendingPaymentsByStudentId(studentId);
 	}
 
-    @Override
-    public StudentDTO login(Student student) {
-        Student savedStudent = studentRepository.findStudentByEmail(student.getEmail());
-        if(savedStudent == null ||savedStudent.getStudentName() == null){
-            throw new ResourceNotFoundException("Student Does not exist");
-        }
-        return StudentMapper.mapToStudentDTO(savedStudent);
-    }
 
+	@Override
+	public List<Leave> getAllLeaves() {
+		return leaveServices.getAllLeaves();
+	}
+
+
+   
 
 }

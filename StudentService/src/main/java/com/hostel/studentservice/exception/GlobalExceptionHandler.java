@@ -24,6 +24,18 @@ public class GlobalExceptionHandler {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
 	}
 	
+	@ExceptionHandler(value=PaymentException.class)
+	public ResponseEntity<ApiResponse> paymentException(PaymentException e){
+		String message = e.getMessage();
+		ApiResponse response = ApiResponse
+				.builder()
+				.message(message)
+				.success(false)
+				.httpStatus(HttpStatus.NOT_FOUND)
+				.build();
+		
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
+	}
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ApiResponse> methodArgumentException(MethodArgumentNotValidException e){

@@ -16,9 +16,15 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 	
+    @ExceptionHandler(ResourceAlreadyExistsException.class)
+    public ResponseEntity<ApiResponse> alreadyExist(ResourceAlreadyExistsException e){
+    	 ApiResponse response = ApiResponse.builder().message(e.getMessage()).httpStatus(HttpStatus.CONFLICT).success(true).build();
+         return new ResponseEntity<>(response, HttpStatus.CONFLICT);
+    }
+    
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<ApiResponse> constraintExceptionHandler(ConstraintViolationException e){
         ApiResponse response = ApiResponse.builder().message("Invalid Transaction : Transaction Id already exist.").httpStatus(HttpStatus.ALREADY_REPORTED).success(true).build();
-        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
     }
 }

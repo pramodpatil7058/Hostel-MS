@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface LeaveRepository extends JpaRepository<Leave, Integer> {
     List<Leave> findByStudentId(int studentId);
+    void deleteAllByStudentId(int studentId);
 }

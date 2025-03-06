@@ -55,4 +55,6 @@ public interface LeaveService {
      */
     List<Leave> getAllLeavesByStudentId(int studentId);
 
+	void deleteAllLeavesByStudentId(int userId);
+
 }

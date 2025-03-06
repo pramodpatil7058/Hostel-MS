@@ -1,6 +1,5 @@
 package com.hostel.studentservice.controller;
 
-import com.hostel.studentservice.dto.StudentDTO;
 import com.hostel.studentservice.entities.Leave;
 import com.hostel.studentservice.entities.Payment;
 import com.hostel.studentservice.entities.Student;
@@ -13,7 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/student")
-@CrossOrigin
+//@CrossOrigin
 public class StudentController {
 
     //? Inject the dependency for StudentService
@@ -25,48 +24,38 @@ public class StudentController {
     
     //? Add a new student
     @PostMapping("/saveStudent")
-    public StudentDTO saveStudent(@Valid @RequestBody Student student) {
+    public Student saveStudent(@Valid @RequestBody Student student) {
         return studentService.saveStudent(student);
     }
 
     //? Needed for both student and warden service
 
     //? Get a student based on student id
-    @GetMapping("/getStudentById/{id}")
-    public StudentDTO getStudentById(@PathVariable("id") int studentId){
-        return studentService.getStudentById(studentId);
+    @GetMapping("/getStudent/{id}")
+    public Student getStudentById(@PathVariable("id") int id){
+        return studentService.getStudent(id);
     }
 
     //? Delete a student
     @DeleteMapping("/deleteStudent/{id}")
     public boolean deleteStudent(@PathVariable("id") int studentId){
-        StudentDTO student = studentService.getStudentById(studentId);
-        
         return studentService.deleteStudent(studentId);
     }
 
 
-
-//? Needed for warden service
-
-    //? Login
-    @PostMapping("/login")
-    public StudentDTO login(@RequestBody Student student){
-
-        return studentService.login(student);
-    }
-
+    //?This is needed both to warden and Student
 
     //? Get all the students
     @GetMapping("/getAllStudents")
-    public List<StudentDTO> getAllStudents(){
+    public List<Student> getAllStudents(){
         return studentService.getAllStudents();
     }
     //? Update a student (Used by warden)
     @PutMapping("/updateStudent")
-    public StudentDTO updateStudent(@RequestBody Student student){
+    public Student updateStudent(@RequestBody Student student){
         return studentService.updateStudent(student);
     }
+
 
 //    ? Dealing with leaveService
 
@@ -75,7 +64,11 @@ public class StudentController {
     public Leave applyLeave(@RequestBody Leave leave){
         return studentService.applyLeave(leave);
     }
-
+@GetMapping("/leave/allLeaves")
+public List<Leave> getAllLeaves(){
+	return studentService.getAllLeaves();
+}
+    
     //? Get a leave by leave Id from Leave Service
     @GetMapping("/leave/{leaveId}")
     public Leave getLeave(@PathVariable int leaveId){
@@ -98,6 +91,7 @@ public class StudentController {
     public List<Leave> getLeavesByStudentId(@PathVariable int studentId){
     	return studentService.getLeavesByStudentId(studentId);
     }
+    
 
 //? Student with PaymentService
 

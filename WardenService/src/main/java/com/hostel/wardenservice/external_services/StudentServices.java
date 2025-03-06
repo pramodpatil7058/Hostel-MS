@@ -13,15 +13,15 @@ import java.util.List;
 
 @FeignClient("STUDENTSERVICE")
 public interface StudentServices {
-	@GetMapping("student/getStudentById/{id}")
-	Student getStudent(@PathVariable("id") int studentId) throws Exception;
+	@GetMapping("/student/getStudent/{id}")
+	Student getStudent(@PathVariable("id") int studentId);
 
-	@PutMapping("student/updateStudent")
+	@PutMapping("/student/updateStudent")
 	Student updateStudent(Student student) throws Exception;
 
-	@GetMapping("student/getAllStudents")
+	@GetMapping("/student/getAllStudents")
 	List<Student> getAllStudents(@RequestParam int size, @RequestParam int limit) throws Exception;
 
-	@DeleteMapping("student/deleteStudent/{id}")
+	@DeleteMapping("/student/deleteStudent/{id}")
 	boolean deleteStudent(@PathVariable("id") int studentId) throws Exception;
 }

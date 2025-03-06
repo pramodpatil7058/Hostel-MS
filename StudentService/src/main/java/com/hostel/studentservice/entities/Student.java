@@ -21,24 +21,19 @@ import org.hibernate.validator.constraints.Length;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "stid")
     private int studentId;
-    @NotNull(message = "Student name cannot be null")
-    @Length(min = 3, max = 20, message = "Name should be greater than 3 and smaller than 20 chars")
-    @Column(name = "stname")
     private String studentName;
-    @Column(name = "stemail")
-    @NotNull(message = "Email cannot be null")
-    @Pattern(regexp = "^[\\w._%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$")
     private String email;
     @Column(name = "stabout")
     private String about;
     @Column(name = "status")
     private Boolean status;
-    @Column(name = "password")
-    private String password;
-    @Column(name="role")
-    private String role;
+    @Column(name="address")
+    private String address;
+    @Column(name="branch")
+    private String branch;
+    @Column(name="year_of_study")
+    private String yos;
 	
 }

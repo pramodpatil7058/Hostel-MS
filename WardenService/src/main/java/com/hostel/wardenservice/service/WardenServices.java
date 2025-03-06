@@ -19,4 +19,5 @@ public interface WardenServices {
     Leave updateLeave(Leave leave);
 
     List<Payment> getAllPayments();
+	Student getStudent(int id);
 }

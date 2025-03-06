@@ -120,4 +120,9 @@ public class WardenServicesImpl implements WardenServices {
 		logger.info("Get all payments");
 		return paymentServices.getAllPayments();
 	}
+
+	@Override
+	public Student getStudent(int id) {
+		return studentServices.getStudent(id);
+	}
 }

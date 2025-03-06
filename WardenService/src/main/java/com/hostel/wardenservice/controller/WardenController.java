@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/warden")
-@CrossOrigin
 public class WardenController {
 
 	private WardenServices wardenServices;
@@ -24,10 +23,15 @@ public class WardenController {
 //    ? Needed from StudentService
 
 	@GetMapping("/changeApplicationStatus")
-	public Student changeApplicationStatus(@RequestParam int studentId, @RequestParam boolean status) {
+	public Student changeApplicationStatus(@RequestParam("studentId") int studentId, @RequestParam("status") boolean status) {
 		return wardenServices.changeApplicationStatus(studentId, status);
 	}
 
+	@GetMapping("/getStudent/{id}")
+	public Student getStudent(@PathVariable int id) {
+		return wardenServices.getStudent(id);
+	}
+	
 	@GetMapping("/getAllStudents")
 	public ResponseEntity<List<Student>> getAllStudents(@RequestParam int size, @RequestParam int limit) {
 		List<Student> students = wardenServices.getAllStudents(size, limit);

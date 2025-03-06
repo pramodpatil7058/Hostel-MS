@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import com.hostel.leave_service.entity.Leave;
 import com.hostel.leave_service.service.LeaveService;
 
+import jakarta.ws.rs.Path;
+
 import java.util.List;
 
 @RestController
@@ -49,6 +51,12 @@ public class LeaveController {
         return leaveService.updateLeave(leave);
     }
 
+    @DeleteMapping("/deleteAllByUserId/{userId}")
+    public String deleteAllByUserId(@PathVariable int userId) {
+    	leaveService.deleteAllLeavesByStudentId(userId);
+    	return "Success";
+    }
+    
     //? Delete leave
     @DeleteMapping("/{leaveId}")
     public String deleteLeave(@PathVariable int leaveId){

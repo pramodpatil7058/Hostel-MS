@@ -1,6 +1,8 @@
 package com.hostel.paymentservice.entity;
 
 
+import java.util.Date;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

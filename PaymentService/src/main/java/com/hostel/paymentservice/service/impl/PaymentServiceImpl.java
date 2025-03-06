@@ -60,10 +60,12 @@ public class PaymentServiceImpl implements PaymentService {
     	logger.info("Updated payment with payment Id {}",payment.getPayId());
         Payment oldPayment = paymentRepository.findById(payment.getPayId()).orElse(null);
         if(oldPayment == null){
+        	System.out.println("Paymnet Not found");
         	return null;
         }
-        Payment tranPayment = paymentRepository.findPaymentByTransactionId(payment.getTransactionId());
-        if(tranPayment !=null){
+        List<Payment> tranPayment = paymentRepository.findPaymentByTransactionId(payment.getTransactionId());
+        if(tranPayment.size()>0){
+        	System.out.println("More than One Payment found");
             return null;
         }
         oldPayment.setTransactionId(payment.getTransactionId());

@@ -1,5 +1,6 @@
 package com.hostel.wardenservice.entity;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,9 +10,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Student
 {
-    private int studentId;
+	private int studentId;
     private String studentName;
-    private String email;
     private String about;
     private Boolean status;
+    private String address;
+    private String branch;
+    private String yos;
 }

@@ -8,6 +8,8 @@ import com.hostel.leave_service.entity.Leave;
 import com.hostel.leave_service.repository.LeaveRepository;
 import com.hostel.leave_service.service.LeaveService;
 
+import jakarta.transaction.Transactional;
+
 import java.util.List;
 
 /**
@@ -17,6 +19,7 @@ import java.util.List;
  */
 
 @Service
+@Transactional
 public class LeaveServiceImpl implements LeaveService {
 
 
@@ -39,7 +42,7 @@ public class LeaveServiceImpl implements LeaveService {
     @Override
     public Leave addLeave(Leave leave) {
     	logger.info("Add Leave service executed");
-        leave.setStatus(false);
+        leave.setStatus(null);
         return leaveRepository.save(leave);
     }
 
@@ -117,4 +120,10 @@ public class LeaveServiceImpl implements LeaveService {
     	logger.info("Get all leaves by student id {}", studentId);
         return leaveRepository.findByStudentId(studentId);
     }
+
+	@Override
+	public void deleteAllLeavesByStudentId(int userId) {
+		// TODO Auto-generated method stub
+		leaveRepository.deleteAllByStudentId(userId);
+	}
 }

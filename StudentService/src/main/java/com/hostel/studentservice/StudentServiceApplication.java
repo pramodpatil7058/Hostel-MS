@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @CrossOrigin
 public class StudentServiceApplication {
 
+	
 	public static void main(String[] args) {
 		SpringApplication.run(StudentServiceApplication.class, args);
+		
 	}
 
 }
